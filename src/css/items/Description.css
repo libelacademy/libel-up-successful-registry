@@ -1,0 +1,14 @@
+.Description {
+    font-size: 16px;
+    width: 80%;
+    
+}
+
+.Description p {
+    margin: 40px 0;
+    color: #696871;
+}
+
+.Description b {
+    color: black;
+}
