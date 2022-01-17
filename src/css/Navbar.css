@@ -1,8 +1,7 @@
-@import url("./colors.css");
-
 .Navbar {
     width: 100%;
-    height: 80px;
+    height: 110px;
+    border-bottom: 1px solid var(--line);
     position: fixed;
     z-index: 10000;
     top: 0;
@@ -11,63 +10,49 @@
     backdrop-filter: blur(28.7px);
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
-    border-bottom: 1px solid rgba(143, 143, 143, 0.6);
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 14px;
+    justify-content: center;
 }
 
 .Navbar a {
     text-decoration: none;
-    color: #ffffff;
-    margin: 0px 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-weight: 300;
-    outline: none;
+    color: white;
 }
 
-.Navbar a:hover {
-    color: rgba(143, 143, 143, 1);
-    border-bottom: 3px solid #6000de;
-}
-
-.nav-container {
+.navbar-container {
     display: grid;
-    grid-template-columns: 0.7fr 1.6fr 0.7fr;
+    grid-template-columns: 25% 45% 30%;
     grid-template-rows: 1fr;
     gap: 0px 0px;
-    grid-template-areas: "logo navigation academy";
-    height: 80px;
+    grid-template-areas: "home navigation academy";
 }
 
-.logo {
-    grid-area: logo;
+.home {
+    grid-area: home;
+    border-right: 1px solid var(--line);
     display: flex;
     align-items: center;
-    border-right: 1px solid rgba(143, 143, 143, 0.3);
+    justify-content: flex-start;
+    padding-left: 20px;
 }
-
-.logo img {
-    width: 150px;
-}
-
 .navigation {
+    grid-area: navigation;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "search shortcuts";
     grid-area: navigation;
-    padding: 0px 20px;
-    border-right: 1px solid rgba(143, 143, 143, 0.3);
+    /* padding: 0px 20px; */
+    /* padding-left: 20px; */
 }
+
 .search {
     grid-area: search;
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 .search input {
@@ -103,8 +88,7 @@
     margin: 0px 20px;
     height: 100%;
     border: none;
-    font-size: 14px;
-    font-weight: 300 !important;
+    font-size: 16px;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -114,23 +98,41 @@
 }
 
 .Navbar .nav-courses:hover {
-    color: rgba(143, 143, 143, 1) !important;
-    border-bottom: 3px solid #6000de;
+    color: rgba(143, 143, 143, 1);
+    border-bottom: 2px solid #6000de;
 }
 
-.academy {
-    grid-area: academy;
+.shortcuts a {
+    height: 100%;
     display: flex;
     align-items: center;
 }
 
-.Navbar .login {
+.shortcuts a:hover {
+    color: rgba(143, 143, 143, 1);
+    border-bottom: 2px solid #6000de;
+}
+
+.academy {
+    grid-area: academy;
+    border-left: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.register:hover {
+    color: #6000de;
+}
+
+.login {
     border: 1px solid rgba(143, 143, 143, 0.6);
     padding: 10px 20px;
     height: 50px;
+    margin-left: 30px;
 }
 
-.Navbar .login:hover {
+.login:hover {
     background-color: rgba(143, 143, 143, 0.4);
     border: 1px solid rgba(143, 143, 143, 0.6);
 }
@@ -140,121 +142,24 @@
     display: none;
 }
 
-.courses-menu-container {
-    width: 100vw;
-    height: calc(100vh - 80px);
-    position: fixed;
-    z-index: 1000;
-    top: 80px;
-    background-color: rgba(176, 176, 176, 0.8);
-    display: flex;
-    justify-content: center;
-    transition: 0.2s ease-in all;
-}
-
-.courses-menu {
-    width: 100%;
-    max-width: 1440px;
-    height: 400px;
-    background-color: rgba(78, 78, 78, 1);
-    box-shadow: 0px 0px 7px 0px rgba(0,0,0,1);
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,1);
-    display: flex;
-    position: relative;
-    z-index: 1000;
-    transition: 0.5s ease-in all;
-}
-.courses-preview {
-    background-color: #fafafa;
-    width: 590px;
-    height: 100%;
-    overflow: hidden;   
-}
-.courses-list {
-    width: calc(100% - 590px);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.courses-column {
-    height: 90%;
-}
-
-.courses-column h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.courses-column ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.courses-column li {
-    display: flex;
-    align-items: center;
-}
-
-.courses-column a {
-    font-size: 16px;
-}
-
-.courses-column a:hover {
-    border: none;
-    color: #8f8f8f;
-}
-
-.corses-bullet-point {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #8f8f8f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 @media (max-width: 1024px) {
-    .nav-container {
-        display: grid;
+    .navbar-container {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-template-areas: "logo navigation academy";
-        height: 80px;
     }
 
-    .courses-column h3 { 
-        font-size: 16px;
+    .academy {
+        padding-left: 20px;
     }
 
-
-    .courses-column a {
-        font-size: 12px;
-     }
-
-
-     .corses-bullet-point {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-     }
-
-
-     .corses-bullet-point img {
-         width: 10px;
-     }
+    .login {
+        margin-left: 20px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
+
     .Navbar {
-        width: 100%;
+        height: 90px;
     }
 
     .shortcuts,
@@ -269,6 +174,7 @@
 
     .academy {
         justify-content: flex-end;
+        padding-right: 20px;
     }
 
     .menu-icon {
@@ -276,38 +182,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .menu-list {
-        width: 400px;
-        height: calc(100vh - 80px);
-        position: fixed;
-        top: 80px;
-        right: 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        font-size: 36px;
-        background-color: #8f8f8f;
-    }
-
-    .menu-academy {
-        width: 100%;
-        border-bottom: 1px solid;
+        cursor: pointer;
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 460px) {
+
     .search input {
         display: none;
     }
 
-    .navigation {
-        border-right: 1px solid rgba(143, 143, 143, 0.2);
+    .navigation, .academy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .nav-container {
-        grid-template-columns: 2.2fr 0.4fr 0.4fr;
+    .navbar-container {
+        grid-template-columns: 60% 20% 20%;
+    }
+
+    .search {
+        margin: 0;
     }
 
     .search-icon {

@@ -1,7 +1,7 @@
 .ContentMaster {
     width: 100%;
     height: 670px;
-    background-color: var(--line);
+    background-color: var(--base-1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,6 +197,11 @@
     text-align: center;
     color: var(--primary-blue);
     font-size: 16px;
+}
+
+.content-master-info button:hover {
+    background-color: #6000de;
+    color: white;
 }
 
 @media (max-width: 1280px) {

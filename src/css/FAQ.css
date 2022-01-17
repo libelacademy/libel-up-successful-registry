@@ -51,7 +51,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 0px 60px 0;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .request-advice {
@@ -63,6 +63,12 @@
     font-size: 16px;
     background-color: transparent;
     margin-top: 40px;
+    cursor: pointer;
+}
+
+.request-advice:hover {
+    background-color: var(--primary-blue);
+    color: white;
 }
 
 .faq-imagen {

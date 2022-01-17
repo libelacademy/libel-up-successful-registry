@@ -15,9 +15,8 @@ const ContentMaster = () => {
     const [option, setOption] = useState(standard);
     const [displayButton, setDisplayButton] = useState("none");
     const [position, setPosition] = useState(0);
-    const [disabledButtonPrevious, setDisabledButtonPrevious] = useState(false)
+    const [disabledButtonPrevious, setDisabledButtonPrevious] = useState(false);
     const [disabledButtonNext, setDisabledButtonNext] = useState(false);
-
 
     useEffect(() => {
         if (active === "standard") {
@@ -44,9 +43,9 @@ const ContentMaster = () => {
 
     const nextPosition = () => {
         if (position !== option.length - 1) {
-            setPosition( position + 1)
+            setPosition(position + 1);
         }
-    }
+    };
 
     const previousPosition = () => {
         if (position !== 0) {
@@ -57,7 +56,7 @@ const ContentMaster = () => {
     useEffect(() => {
         setDisabledButtonPrevious(position === 0);
         setDisabledButtonNext(position === option.length - 1);
-    }, [position, option])
+    }, [position, option]);
 
     return (
         <div className="ContentMaster">
@@ -69,12 +68,6 @@ const ContentMaster = () => {
                             backgroundImage: `url(${option[position].image})`,
                         }}
                     >
-                        {/* <div className="content-master-image">
-                            <img
-                                src={option[position].image}
-                                alt="Content Master"
-                            />
-                        </div> */}
                         <div className="content-master-filter"></div>
                         <div className="content-master-description">
                             <h2>{option[position].id}</h2>
