@@ -142,6 +142,86 @@
     display: none;
 }
 
+.courses-menu-container {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    position: fixed;
+    z-index: 1000;
+    top: 110px;
+    background-color: rgba(176, 176, 176, 0.8);
+    display: flex;
+    justify-content: center;
+    transition: 0.2s ease-in all;
+}
+
+.courses-menu {
+    width: 100%;
+    max-width: 1440px;
+    height: 400px;
+    background-color: rgba(78, 78, 78, 1);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 1);
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    transition: 0.5s ease-in all;
+}
+.courses-preview {
+    background-color: #fafafa;
+    width: 590px;
+    height: 100%;
+    overflow: hidden;
+}
+.courses-list {
+    width: calc(100% - 590px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.courses-column {
+    height: 90%;
+}
+
+.courses-column h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.courses-column ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.courses-column li {
+    display: flex;
+    align-items: center;
+}
+
+.courses-column a {
+    font-size: 16px;
+}
+
+.courses-column a:hover {
+    border: none;
+    color: #8f8f8f;
+}
+
+.corses-bullet-point {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: #8f8f8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 1024px) {
     .navbar-container {
         grid-template-columns: 1fr 1fr 1fr;
@@ -154,10 +234,27 @@
     .login {
         margin-left: 20px;
     }
+
+    .courses-column h3 {
+        font-size: 16px;
+    }
+
+    .courses-column a {
+        font-size: 12px;
+    }
+
+    .corses-bullet-point {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+
+    .corses-bullet-point img {
+        width: 10px;
+    }
 }
 
 @media (max-width: 860px) {
-
     .Navbar {
         height: 90px;
     }
@@ -184,15 +281,32 @@
         justify-content: center;
         cursor: pointer;
     }
+        .menu-list {
+        width: 400px;
+        height: calc(100vh - 80px);
+        position: fixed;
+        top: 80px;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 36px;
+        background-color: #8f8f8f;
+    }
+
+    .menu-academy {
+        width: 100%;
+        border-bottom: 1px solid;
+    }
 }
 
 @media (max-width: 460px) {
-
     .search input {
         display: none;
     }
 
-    .navigation, .academy {
+    .navigation,
+    .academy {
         display: flex;
         align-items: center;
         justify-content: center;
