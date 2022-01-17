@@ -1,7 +1,7 @@
 const questions = [
     {
         id: 0,
-        question: "¿Quién pueden tomar este MÁSTER?",
+        question: "¿Quién puede tomar este MÁSTER?",
         answer: "Cualquier persona que tenga conocimientos básicos en algún software 3D",
     },
     {

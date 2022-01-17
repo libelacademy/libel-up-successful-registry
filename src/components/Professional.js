@@ -15,8 +15,7 @@ const Professional = () => {
                 </div>
                 <div className="professional-content">
                     <p>
-                        Estudia online desde<br/>cualquier parte del mundo con<br/>FEED
-                        BACK en Discord.
+                        Estudia online desde<br/>cualquier parte del mundo con<br/>FEEDBACK en Discord.
                     </p>
                     <DegradeButton name={"MÁS INFORMACIÓN"} width={250}/>
                 </div>
