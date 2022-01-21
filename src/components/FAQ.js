@@ -32,10 +32,14 @@ const FAQ = () => {
                                 />
                             ))}
                         </div>
-
-                        <button className="request-advice">
+                        <a
+                            href="https://calendly.com/libel"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            className="request-advice"
+                        >
                             SOLICITAR ASESORÍA
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
