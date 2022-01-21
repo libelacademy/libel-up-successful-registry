@@ -1,9 +1,9 @@
-import React, { useState, useEffect} from 'react'
-import "../css/Navbar.css"
+import React, { useState, useEffect } from "react";
+import "../css/Navbar.css";
 
-import { IoSearch, IoCaretDown, IoCaretUp, IoMenu } from "react-icons/io5";
+import { IoCaretDown, IoCaretUp, IoMenu } from "react-icons/io5";
 
-import logo from "../images/logo.png"
+import logo from "../images/logo.png";
 
 import bulletPoint1 from "../images/courses-list/002-gantt chart.png";
 import bulletPoint2 from "../images/courses-list/021-mail.png";
@@ -17,47 +17,47 @@ import coursesPreviewList from "../utils/previewCourses";
 import SlideShow from "./sliders/SlideShow";
 
 const Navbar = () => {
-        const [menu, setMenu] = useState(false);
-        const [showMenu, setShowMenu] = useState("none");
-        const [courses, setCourses] = useState(false);
-        const [coursesMenu, setCoursesMenu] = useState({
-            visibility: "hidden",
-            opacity: 0,
-        });
-        const [courseColor, setCourseColor] = useState("#ffffff");
-        const [top, setTop] = useState("-100%");
+    const [menu, setMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState("none");
+    const [courses, setCourses] = useState(false);
+    const [coursesMenu, setCoursesMenu] = useState({
+        visibility: "hidden",
+        opacity: 0,
+    });
+    const [courseColor, setCourseColor] = useState("#ffffff");
+    const [top, setTop] = useState("-100%");
 
-        useEffect(() => {
-            if (menu) {
-                setShowMenu("flex");
-            } else {
-                setShowMenu("none");
-            }
-        }, [menu]);
+    useEffect(() => {
+        if (menu) {
+            setShowMenu("flex");
+        } else {
+            setShowMenu("none");
+        }
+    }, [menu]);
 
-        useEffect(() => {
-            if (courses) {
-                setCoursesMenu({ visibility: "visible", opacity: 1 });
-                setCourseColor("#8f8f8f");
-                setTop("0");
-            } else {
-                setCoursesMenu({ visibility: "hidden", opacity: 0 });
-                setCourseColor("#ffffff");
-                setTop("-100%");
-            }
-        }, [courses]);
+    useEffect(() => {
+        if (courses) {
+            setCoursesMenu({ visibility: "visible", opacity: 1 });
+            setCourseColor("#8f8f8f");
+            setTop("0");
+        } else {
+            setCoursesMenu({ visibility: "hidden", opacity: 0 });
+            setCourseColor("#ffffff");
+            setTop("-100%");
+        }
+    }, [courses]);
 
-        const handleCloseCourseMenu = (event) => {
-            if (event.target.className === "courses-menu-container") {
-                setCourses(false);
-            }
-        };
-    
+    const handleCloseCourseMenu = (event) => {
+        if (event.target.className === "courses-menu-container") {
+            setCourses(false);
+        }
+    };
+
     return (
         <div className="Navbar">
             <div className="navbar-container container">
                 <div className="home">
-                    <a className="logo" href="/#">
+                    <a className="logo" href="/">
                         <img src={logo} alt="Libel Academy" />
                     </a>
                 </div>
@@ -148,7 +148,13 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Curso de Rigging</a>
+                                    <a
+                                        href="https://cursos.libel.academy/collections?q=Rigging"
+                                        target={"_blank"}
+                                        rel="noreferrer"
+                                    >
+                                        Curso de Rigging
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -157,7 +163,13 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Curso de Blender</a>
+                                    <a
+                                        href="https://aprende-blender.libel.academy/"
+                                        target={"_blank"}
+                                        rel="noreferrer"
+                                    >
+                                        Curso de Blender
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -166,7 +178,13 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Curso de ZBrush</a>
+                                    <a
+                                        href="https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush"
+                                        target={"_blank"}
+                                        rel="noreferrer"
+                                    >
+                                        Curso de ZBrush
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -175,7 +193,13 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Curso de ilustración</a>
+                                    <a
+                                        href="https://cursos.libel.academy/collections?q=concep"
+                                        target={"_blank"}
+                                        rel="noreferrer"
+                                    >
+                                        Curso de ilustración
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -189,7 +213,9 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Masters</a>
+                                    <a href="https://libel.academy/libel/master/">
+                                        Masters
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -198,7 +224,9 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Membresías</a>
+                                    <a href="https://cursos.libel.academy/collections?category=membresias">
+                                        Membresías
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -207,7 +235,9 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">3D Camp</a>
+                                    <a href="https://libel.academy/3d-camp/">
+                                        3D Camp
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -216,7 +246,9 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Aprende a tu ritmo</a>
+                                    <a href="https://cursos.libel.academy/collections?category=courses">
+                                        Aprende a tu ritmo
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -225,7 +257,9 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Licencias ZBrush</a>
+                                    <a href="https://libel.academy/zbrush/">
+                                        Licencias ZBrush
+                                    </a>
                                 </li>
                                 <li>
                                     <div className="corses-bullet-point">
@@ -234,7 +268,9 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="/#">Reallusion</a>
+                                    <a href="https://libel.academy/master-personajes-estilizados/">
+                                        Reallusion
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -248,6 +284,6 @@ const Navbar = () => {
             </div>
         </div>
     );
-}
+};
 
-export default Navbar
+export default Navbar;

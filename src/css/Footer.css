@@ -45,12 +45,17 @@ display: grid;
     text-transform: uppercase;
     list-style: none;
     font-size: 24px;
-    color: var(--white);
     cursor: pointer;
+    color: var(--white);
     margin: 10px 0px;
 }
 
-.footer-list li:hover {
+.footer-list a {
+    color: var(--white);
+text-decoration: none;
+}
+
+.footer-list a:hover, .footer-list li:hover {
     color: var(--primary-blue);
 }
 

@@ -20,13 +20,41 @@ const Footer = () => {
                 <div className="footer-content-container container">
                     <div className="footer-shortcuts">
                         <ul className="footer-list">
-                            <li>Cursos</li>
-                            <li>Masters</li>
-                            <li>Escuela Zbrush</li>
-                            <li>Escuela Blender</li>
-                            <li>Escuela Rigging</li>
-                            <li>Escuela Ilustración</li>
-                            <li>Licencias</li>
+                            <li>
+                                <a href="https://cursos.libel.academy/collections?category=courses">
+                                    Cursos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://libel.academy/libel/master/">
+                                    Masters
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush">
+                                    Escuela Zbrush
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aprende-blender.libel.academy/">
+                                    Escuela Blender
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cursos.libel.academy/collections?q=Rigging">
+                                    Escuela Rigging
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cursos.libel.academy/collections?q=concep">
+                                    Escuela Ilustración
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://libel.academy/zbrush/">
+                                    Licencias
+                                </a>
+                            </li>
                             <li>Resultados</li>
                         </ul>
                     </div>
