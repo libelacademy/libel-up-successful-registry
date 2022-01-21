@@ -82,15 +82,26 @@ display: grid;
     color: var(--white);
 }
 
+.help a:hover {
+    color: var(--primary-blue);
+}
+
 .social-networks {
     display: flex;
     align-items: center;
     margin: 20px 0px;
+
 }
 
 .social-networks img {
     width: 25px;
     margin-right: 15px;
+    transition: 0.2s transforme ease-in;
+        
+}
+
+.social-networks img:hover {
+    transform: scale(1.3);
 }
 
 /* ############################################## */
@@ -104,31 +115,37 @@ display: grid;
 }
 
 .footer-container {
-display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas: "terms copyright";
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .footer .terms {
-    width: 50%;
-    justify-self: center;
-    grid-area: terms;
     color: var(--base-3);
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-decoration: none;
 }
 
 .footer .copyright {
-    width: 50%;
-    justify-self: center;
-    grid-area: copyright;
     color: var(--base-2);
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+
+.footer .privacy-policy{
+    color: var(--base-2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.terms:hover, .privacy-policy:hover {
+    color: var(--primary-blue);
 }
 
 
@@ -151,7 +168,6 @@ display: grid;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 20p;
     }
 
     .footer .terms { 
@@ -187,7 +203,7 @@ display: grid;
         height: 900px;
         grid-template-rows: 1.9fr 0.1fr; 
     }
-    .footer .terms, .footer .copyright  { 
+    .footer .terms, .footer .copyright, .footer .privacy-policy  { 
         font-size: 12px;
     }
 

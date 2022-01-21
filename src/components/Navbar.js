@@ -63,8 +63,8 @@ const Navbar = () => {
                 </div>
                 <div className="navigation">
                     <div className="search">
-                        <IoSearch className="search-icon" />
-                        <input type="text" name="search" placeholder="Buscar" />
+                        {/* <IoSearch className="search-icon" />
+                        <input type="text" name="search" placeholder="Buscar" /> */}
                     </div>
                     <div className="shortcuts">
                         <a href="https://libel.academy/zbrush/">Licencias</a>

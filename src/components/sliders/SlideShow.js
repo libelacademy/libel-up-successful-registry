@@ -13,7 +13,7 @@ const SlideShow = ({ courses }) => {
             //Obtener el primer elemento
             const firstElement = slideshow.current.children[0];
             //Establecer la transición
-            slideshow.current.style.transition = `2000ms ease-out all`;
+            slideshow.current.style.transition = `500ms ease-out all`;
             const slideSize = slideshow.current.children[0].offsetWidth;
             // Mover slideshow
             slideshow.current.style.transform = `translateX(-${slideSize}px)`;
@@ -61,7 +61,7 @@ const SlideShow = ({ courses }) => {
     useEffect(() => {
         intervaloSlideshow.current = setInterval(() => {
             nextSlide()
-        }, 6000);
+        }, 4000);
 
         //
         slideshow.current.addEventListener('mouseenter', () => {
@@ -72,7 +72,7 @@ const SlideShow = ({ courses }) => {
         slideshow.current.addEventListener("mouseleave", () => {
             intervaloSlideshow.current = setInterval(() => {
                 nextSlide();
-            }, 6000);
+            }, 4000);
         });
     }, [])
 

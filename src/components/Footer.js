@@ -37,34 +37,66 @@ const Footer = () => {
                             className="footer-logo"
                         />
                         <h4>CONTACTO</h4>
-                        <DegradeButton name="CREAR CUENTA" width={200} />
+                        <DegradeButton
+                            name="CREAR CUENTA"
+                            width={200}
+                            url={"https://cursos.libel.academy/users/sign_up"}
+                        />
                         <p className="help">
                             <a href="/#">Trabaja con nosotros</a>
                             <br />o <a href="/#">solicita ayuda</a>
                         </p>
                         <div className="social-networks">
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://www.facebook.com/libelacademy"
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={facebook} alt="facebook" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a href="/#" target={"_blank"} rel="noreferrer">
                                 <img src={twitch} alt="twitch" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://www.instagram.com/libelacademy/"
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={instagram} alt="instagram" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://wa.link/1wru1w"
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={whatsapp} alt="whatsapp" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://www.linkedin.com/company/libelstudios/?originalSubdomain=co"
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={linkedin} alt="linkedin" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://discord.gg/r6UHQEtGrQ"
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={discord} alt="discord" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://www.youtube.com/channel/UCUgle_FMVoBU75h0Vx8L7xA"
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={youtube} alt="youtube" />
                             </a>
-                            <a href="/#" target={"_blank"}>
+                            <a
+                                href="https://bit.ly/3gNaaTG "
+                                target={"_blank"}
+                                rel="noreferrer"
+                            >
                                 <img src={telegram} alt="telegram" />
                             </a>
                         </div>
@@ -73,7 +105,22 @@ const Footer = () => {
             </div>
             <div className="footer">
                 <div className="footer-container container">
-                    <p className="terms">Términos y Condiciones</p>
+                    <a
+                        href="https://libel.academy/libel/politicas-de-privacidad/"
+                        target={"_blank"}
+                        rel="noreferrer"
+                        className="privacy-policy"
+                    >
+                        Política de Privacidad
+                    </a>
+                    <a
+                        href="https://libel.academy/libel/terminos-y-condiciones/"
+                        target={"_blank"}
+                        rel="noreferrer"
+                        className="terms"
+                    >
+                        Términos y Condiciones
+                    </a>
                     <p className="copyright">&copy; Copyright 2022</p>
                 </div>
             </div>

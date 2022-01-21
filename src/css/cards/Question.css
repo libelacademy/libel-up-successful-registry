@@ -1,5 +1,5 @@
 .Question {
- width: 600px;
+ width: 450px;
 height: auto;
 border-bottom: 1px solid var(--line);
 margin: 10px 0px;
@@ -7,9 +7,9 @@ margin: 10px 0px;
 
 .question-header {
     color: var(--base-1);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +20,7 @@ margin: 10px 0px;
 .question-body {
     color: var(--base-3);
     padding: 0px 20px;
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
