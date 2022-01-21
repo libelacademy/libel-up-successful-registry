@@ -122,8 +122,22 @@ const Navbar = () => {
                 </div>
                 <ul className="menu-list" style={{ display: `${showMenu}` }}>
                     <div className="menu-academy">
-                        <li>Crear cuenta</li>
-                        <li>Entrar</li>
+                        <a
+                            href="https://cursos.libel.academy/users/sign_up"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            className="register-mobile"
+                        >
+                            Crear cuenta
+                        </a>
+                        <a
+                            href="https://cursos.libel.academy/users/sign_in"
+                            target={"_blank"}
+                            rel="noreferrer"
+                            className="login-mobile"
+                        >
+                            Entrar
+                        </a>
                     </div>
                     <div className="menu-shortcuts">
                         <li>Licencias</li>
