@@ -14,6 +14,12 @@ const Benefits = () => {
     const benefitsList = benefits.map((benefit, i) => (
         <Benefit key={i} title={benefit.title} body={benefit.body} />
     ));
+
+    const benefitsGroups = [
+        [benefitsList[0], benefitsList[1], benefitsList[2]],
+        [benefitsList[3], benefitsList[4]],
+    ];
+
     const [position, setPosition] = useState(0);
 
     const nextPosition = () => {
@@ -24,6 +30,18 @@ const Benefits = () => {
         setPosition(position === 0 ? benefits.length - 1 : position - 1);
     };
 
+        const nextPositionGroup = () => {
+            setPosition(
+                position === benefitsGroups.length - 1 ? 0 : position + 1
+            );
+        };
+
+        const previousPositionGroup = () => {
+            setPosition(
+                position === 0 ? benefitsGroups.length - 1 : position - 1
+            );
+        };
+
     return (
         <div className="Benefits">
             <div className="benefits-container container padding">
@@ -33,7 +51,46 @@ const Benefits = () => {
                     LIBEL ACADEMY
                     <img src={line} alt="decoration Line" />
                 </h1>
-                <div className="benefits-content">{benefitsList}</div>
+                <div className="benefits-content">
+                    <div className="benefits-items">
+                        {benefitsGroups[position]}
+                    </div>
+                    <div className="benefits-nav">
+                        <IoArrowBack
+                            onClick={() => {
+                                previousPositionGroup();
+                            }}
+                        />
+
+                        <div className="benefits-nav-control">
+                            <button
+                                className={
+                                    position === 0
+                                        ? "benefits-nav-dot-active"
+                                        : "benefits-nav-dot"
+                                }
+                                onClick={() => {
+                                    setPosition(0);
+                                }}
+                            ></button>
+                            <button
+                                className={
+                                    position === 1
+                                        ? "benefits-nav-dot-active"
+                                        : "benefits-nav-dot"
+                                }
+                                onClick={() => {
+                                    setPosition(1);
+                                }}
+                            ></button>
+                        </div>
+                        <IoArrowForward
+                            onClick={() => {
+                                nextPositionGroup();
+                            }}
+                        />
+                    </div>
+                </div>
                 <div className="benefits-content-mobile">
                     {benefitsList[position]}
                     <div className="benefits-nav">

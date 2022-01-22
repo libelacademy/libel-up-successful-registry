@@ -170,8 +170,8 @@
 .course-start-now:hover {
     background: linear-gradient(
         110deg,
-        rgba(96, 0, 222, 1) 50%,
-        rgba(0, 255, 255, 1) 80%
+        rgba(96, 0, 222, 1) 100%,
+        rgba(0, 255, 255, 1) 100%
     );
 }
 

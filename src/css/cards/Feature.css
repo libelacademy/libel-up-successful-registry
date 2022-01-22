@@ -1,19 +1,75 @@
 .Feature {
     width: 360px;
     height: 350px;
-    background-color: #6000de;
+    background-color: var(--primary-blue);
     color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "feature-header"
+        "feature-content";
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+.feature-header {
+    grid-area: feature-header;
+    background-color: #ffffff;
     position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 102% 102%;
 }
 
-.feature-image {
+.feature-video {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--base-3);
+    font-size: 24px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: calc(50% - 35px);
+
+    left: calc(50% - 35px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s all ease-in;
+    cursor: pointer;
+}
+
+.Feature:hover .feature-video {
+    opacity: 1;
+    visibility: visible;
+}
+
+.feature-video:hover {
+    transform: scale(1.2);
+}
+
+.feature-content {
+    width: 100%;
+    grid-area: feature-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-content h3 {
+    width: 90%;
+    text-align: center;
+    /* font-size: 18px; */
+}
+
+.feature-content h5 {
+    color: var(--base-3);
+    font-weight: 500;
 }
 
 .feature-owner {
@@ -25,13 +81,16 @@
     position: absolute;
     z-index: 10;
     left: calc(50% - 100px);
-    bottom: 35%;
-    padding: 0px 15px;
+    top: -30px;
+    /* padding: 0px 15px;
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
-    grid-template-areas: "feature-avatar feature-name";
+    grid-template-areas: "feature-avatar feature-name"; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-avatar {
@@ -42,19 +101,8 @@
     grid-area: feature-name;
     align-self: center;
     justify-self: start;
-    padding-left: 10px;
+    font-size: 18px;
 }
-
-.feature-title {
-    width: 60%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    text-align: center;
-}
-
 
 @media (max-width: 1024px) {
     .Feature {

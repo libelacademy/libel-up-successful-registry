@@ -1,28 +1,25 @@
 const benefits = [
     {
-        title: "puedes aprender desde cero",
-        body: "No importa en el nivel en el que te encuentres, nosotros te guiamos en tu proceso de aprendizaje.",
+        title: "Estudia online en vivo o a tu ritmo, tú elijes",
+        body: "Tenemos todas las opciones para ti: Clases online en vivo, Clases en video cn feedback online en vivo, Clases en video para aprender a tu ritmo.",
     },
     {
-        title: "maestros especializados",
-        body: "Especialista en cada una de las áreas y con experiencia en la industria.",
+        title: "Entrenamientos Especializados",
+        body: "Te ofrecemos entrenamientos especializados. Somos especialistas en el desarrollo de contenidos digitales con alto impacto en innovación.",
     },
     {
-        title: "aprende totalmente online",
-        body: "Disfruta de las opciones que tenemos para ti: Acompañamiento en vivo, clases en video con feedback en vivo, o aprende a tu ritmo.",
+        title: "Alcanza un nivel superior en corto tiempo",
+        body: "Con nuestros másteres llegarás a niveles avanzados en menos de un año.",
     },
-    // {
-    //     title: "Mantenlo Simple",
-    //     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    // },
-    // {
-    //     title: "Meno es más",
-    //     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    // },
-    // {
-    //     title: "no Reinventar la rueda",
-    //     body: "No importa en el nivel en el que te encuentres, nosotros te guiamos en tu proceso de aprendizaje.",
-    // },
+    {
+        title: "Maestros especialistas",
+        body: "Los maestros no son generalistas. Nuestros maestros son especialistas en cada una de las áreas y con experiencia en la industria real.",
+    },
+    {
+        title: "Premiamos la excelencia",
+        body: "Brindamos becas a los estudiantes que obtengan resultados excelentes.",
+    },
+
 ];
 
 

@@ -114,6 +114,11 @@
 
 }
 
+.results-buttons button:disabled {
+    background-color: var(--base-3);
+    cursor: auto;
+} 
+
 @media (max-width: 860px) {
     .results-content {
         display: none;
