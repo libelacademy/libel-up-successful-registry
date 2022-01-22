@@ -50,6 +50,15 @@ display: grid;
     margin: 10px 0px;
 }
 
+.footer-list-li {
+text-transform: uppercase;
+    list-style: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--white);
+    margin: 10px 0px;
+}
+
 .footer-list a {
     color: var(--white);
 text-decoration: none;

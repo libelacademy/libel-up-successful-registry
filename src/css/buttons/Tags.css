@@ -3,7 +3,8 @@
     border-radius: 24px;
     -webkit-backdrop-filter: blur(25.8px);
   backdrop-filter: blur(25.8px);
-  background-color: var(--base-3);
+      background-color: rgba(255, 255, 255, 0.4);
+
   position: relative;
   color: white;
   font-weight: 500;
@@ -16,6 +17,7 @@
   margin: 0px 10px;
   cursor: pointer;
   border: none;
+  text-transform: uppercase;
 }
 
 .Tags a {
@@ -39,12 +41,16 @@
 
 }
 
+.Tags:hover {
+  background-color: #6000de70;
+}
+
 .Tags:hover .tags-circle{
-  background-color: rgba(96, 0, 222, 0.5);
+  background-color: var(--primary-blue);
 }
 
 .tag-active {
-  background-color: rgba(96, 0, 222, 0.5);
+  background-color: var(--primary-blue);
 }
 
 @media (max-width:860px) {

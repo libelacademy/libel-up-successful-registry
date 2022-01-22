@@ -3,21 +3,21 @@ import "../../css/buttons/Tags.css";
 
 import { IoAdd } from "react-icons/io5";
 
-const Tags = ({ id, tag, width, active, handleContent }) => {
+const Tags = ({ tag, width, url }) => {
 
     return (
-        <button
+        <a
             className="Tags"
             style={{ width: width }}
-            onClick={() => {
-                handleContent(id);
-            }}
+            href={url}
+            target={"_blank"}
+            rel="noreferrer"
         >
             {tag}
-            <span className={active ? "tags-circle tag-active" : "tags-circle"}>
+            <span className={"tags-circle"}>
                 <IoAdd />
             </span>
-        </button>
+        </a>
     );
 };
 

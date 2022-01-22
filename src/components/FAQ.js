@@ -4,11 +4,15 @@ import "../css/FAQ.css";
 import questions from "../utils/questions";
 import Question from "./cards/Question";
 
-import image from "../images/Imagen 51.png";
+import image from "../images/faq-image.png";
 import line from "../images/line.png";
 
 const FAQ = () => {
-    
+
+    const handleQuestion = (id) => {
+        console.log(questions[id]);
+    };
+
     return (
         <div className="FAQ">
             <div className="faq-container container">
@@ -24,13 +28,66 @@ const FAQ = () => {
                     </div>
                     <div className="faq-questions">
                         <div>
-                            {questions.map((question) => (
-                                <Question
-                                    key={question.id}
-                                    question={question.question}
-                                    answer={question.answer}
-                                />
-                            ))}
+                            <Question
+                                id={questions[0].id}
+                                question={questions[0].question}
+                                answer={questions[0].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[1].id}
+                                question={questions[1].question}
+                                answer={questions[1].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[2].id}
+                                question={questions[2].question}
+                                answer={questions[2].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[3].id}
+                                question={questions[3].question}
+                                answer={questions[3].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[4].id}
+                                question={questions[4].question}
+                                answer={questions[4].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[5].id}
+                                question={questions[5].question}
+                                answer={questions[5].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[6].id}
+                                question={questions[6].question}
+                                answer={questions[6].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[7].id}
+                                question={questions[7].question}
+                                answer={questions[7].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[8].id}
+                                question={questions[8].question}
+                                answer={questions[8].answer}
+                                handleQuestion={handleQuestion}
+                            />
+                            <Question
+                                id={questions[9].id}
+                                question={questions[9].question}
+                                answer={questions[9].answer}
+                                handleQuestion={handleQuestion}
+                            />
                         </div>
                         <a
                             href="https://calendly.com/libel"

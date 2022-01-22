@@ -1,0 +1,161 @@
+.Counseling {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-1);
+    color: white;
+}
+
+.counseling-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.decoration-left {
+    position: absolute;
+    bottom: 0;
+    left: -25%;
+}
+
+.decoration-right {
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+}
+
+.Counseling h1 {
+    max-width: 500px;
+    font-size: 48px;
+    text-align: left;
+}
+
+.Counseling h1 span {
+    font-weight: 900;
+    background: linear-gradient(
+        90deg,
+        rgba(96, 0, 222, 1) 30%,
+        rgba(0, 255, 255, 1) 70%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.counseling-content {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.counseling-content p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.counseling-content a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 250px;
+    height: 50px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.write {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+.write:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.agenda {
+    background: linear-gradient(
+        110deg,
+        rgba(96, 0, 222, 0.8) 50%,
+        rgba(0, 255, 255, 0.6) 80%
+    );
+}
+
+.agenda:hover {
+    background: linear-gradient(
+        110deg,
+        rgba(96, 0, 222, 0.8) 20%,
+        rgba(0, 255, 255, 0.6) 60%
+    );
+}
+
+@media (max-width: 1280pc) {
+    .decoration-left {
+        left: -30%;
+    }
+
+    .decoration-right {
+        right: -30%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .decoration-left {
+        left: -43%;
+    }
+
+    .decoration-right {
+        right: -45%;
+    }
+}
+
+@media (max-width: 860px) {
+    .decoration-left {
+        display: none;
+    }
+
+    .decoration-right {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .Counseling {
+        height: 550px;
+    }
+    .decoration-left {
+        display: none;
+    }
+
+    .decoration-right {
+        display: none;
+    }
+
+    .counseling-container {
+        flex-direction: column;
+    }
+
+    .Counseling h1 {
+        text-align: center;
+        line-height: 48px;
+        margin-bottom: 30px;
+    }
+
+    .counseling-content {
+        align-items: center;
+    }
+
+    .counseling-content p {
+        text-align: center;
+    }
+}

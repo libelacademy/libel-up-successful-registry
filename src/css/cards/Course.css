@@ -1,0 +1,218 @@
+.Course {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+        "course-banner"
+        "course-information";
+    width: 368px;
+    height: 750px;
+    background-color: #ffffff;
+    color: #000000;
+}
+.course-banner {
+    grid-area: course-banner;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.course-information {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.3fr 1.7fr 1.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "course-information-title"
+        "course-information-price"
+        "course-information-text"
+        "course-information-start";
+    grid-area: course-information;
+    width: 100%;
+    height: 350px;
+    padding: 20px 40px;
+}
+.course-information-title {
+    grid-area: course-information-title;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-information-title h4 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.Course:hover h4 {
+    color: #6000de;
+}
+
+.course-information-price {
+    grid-area: course-information-price;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #6000de;
+}
+
+.course-information-price .price {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.course-information-price .line {
+    height: 1px;
+    width: 200px;
+    background-color: #8f8f8f8c;
+}
+
+.course-information-text {
+    grid-area: course-information-text;
+    font-weight: 300;
+    color: #8f8f8f;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.course-information-text p {
+    text-align: left;
+}
+.course-information-start {
+    grid-area: course-information-start;
+    font-size: 14px;
+    color: #8f8f8f;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.course-date {
+    display: flex;
+}
+
+.course-date .segment {
+    text-align: left;
+    margin-right: 20px;
+}
+
+.course-date .numbers {
+    color: #000000;
+    font-size: 20px;
+}
+
+.course-date .letters {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.course-play {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    background-color: #8f8f8f;
+    border: none;
+    color: #ffffff;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: calc(20% - 36px);
+    left: calc(50% - 36px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-out;
+}
+
+.course-play:hover {
+    transform: scale(1.2);
+}
+
+.Course:hover .course-play {
+    top: calc(50% - 36px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.course-start-now {
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(
+        110deg,
+        rgba(96, 0, 222, 1) 50%,
+        rgba(0, 255, 255, 1) 90%
+    );
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: calc(50% - 125px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.course-start-now:hover {
+    background: linear-gradient(
+        110deg,
+        rgba(96, 0, 222, 1) 50%,
+        rgba(0, 255, 255, 1) 80%
+    );
+}
+
+.Course:hover .course-start-now {
+    bottom: 10%;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media (max-width:1024px) {
+    .Course {
+        width: 300px;
+    }
+
+    .course-banner {
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+
+    }
+        .course-information { 
+        padding: 5px 20px;
+    }
+}
+
+@media (max-width:860px) {
+    .Course {
+        width: 368px;
+    }
+
+    .course-information { 
+            padding: 20px 40px;
+    }
+}
+
+@media (max-width:320px) {
+    .Course {
+        width: 300px;
+    }
+    .course-information { 
+        padding: 5px 20px;
+    }
+}
