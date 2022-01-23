@@ -71,6 +71,22 @@
     margin-top: 20px;
 }
 
+.benefits-nav-mobile {
+    width: 200px;
+    height: 48px;
+    border-radius: 24px;
+    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(4.5px);
+    background-color: rgba(143, 143, 143, 0.25);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 14px;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
 .benefits-nav-control {
     width: 100%;
     display: flex;

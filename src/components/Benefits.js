@@ -93,7 +93,7 @@ const Benefits = () => {
                 </div>
                 <div className="benefits-content-mobile">
                     {benefitsList[position]}
-                    <div className="benefits-nav">
+                    <div className="benefits-nav-mobile">
                         <IoArrowBack
                             onClick={() => {
                                 previousPosition();
@@ -129,6 +129,26 @@ const Benefits = () => {
                                 }
                                 onClick={() => {
                                     setPosition(2);
+                                }}
+                            ></button>
+                            <button
+                                className={
+                                    position === 3
+                                        ? "benefits-nav-dot-active"
+                                        : "benefits-nav-dot"
+                                }
+                                onClick={() => {
+                                    setPosition(3);
+                                }}
+                            ></button>
+                            <button
+                                className={
+                                    position === 4
+                                        ? "benefits-nav-dot-active"
+                                        : "benefits-nav-dot"
+                                }
+                                onClick={() => {
+                                    setPosition(4);
                                 }}
                             ></button>
                         </div>
