@@ -18,7 +18,7 @@ const Convert3DPro = () => {
 
     const breakPoints = [
         { width: 1, itemsToShow: 1, itemsToScroll: 1 },
-        { width: 375, itemsToShow: 2, itemsToScroll: 1 },
+        { width: 375, itemsToShow: 3, itemsToScroll: 1 },
         { width: 768, itemsToShow: 6, itemsToScroll: 1 },
         { width: 1200, itemsToShow: 6, itemsToScroll: 1 },
     ];

@@ -151,3 +151,13 @@
         transform: rotate(180deg);
     }
 }
+
+@media (max-width:320px) {
+    .benefits-title {
+    position: relative;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+}
+}

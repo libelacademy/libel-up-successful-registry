@@ -5,13 +5,13 @@ import Counseling from './components/Counseling';
 import Courses from './components/Courses';
 import FAQ from './components/FAQ';
 import FeaturedResults from './components/FeaturedResults';
+import Financing from './components/Financing';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Masters from './components/Masters';
 import Memberships from './components/Memberships';
 import Navbar from './components/Navbar';
 import ZbrushDistributor from './components/ZbrushDistributor';
-
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
       <FeaturedResults />
       <Benefits />
       <ZbrushDistributor />
+      <Financing />
       <FAQ />
       <Footer />
     </div>

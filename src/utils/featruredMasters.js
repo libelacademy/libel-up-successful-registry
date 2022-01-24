@@ -1,7 +1,7 @@
-import masterImage1 from "../images/results/Ellipse 230 (Mask).png"
-import masterImage2 from "../images/results/Rectangle 419.png"
-import masterImage3 from "../images/results/Rectangle 420.png"
-import masterImage4 from "../images/results/Ellipse 231.png"
+import masterImage1 from "../images/master_blender.jpg"
+import masterImage2 from "../images/master_escultura.jpg"
+import masterImage3 from "../images/master_rigging.jpg"
+import masterImage4 from "../images/master_zbrush.jpg"
 
 import Blender from "../images/professional3d/Imagen 7.png"
 import ZBrush from "../images/professional3d/Imagen 1.png"
@@ -13,28 +13,28 @@ const masters = [
         title: "Máster en Blender para Videojuegos",
         professor: "Ricardo Díaz",
         technology: Blender,
-        url: "https://libel.academy/libel/master-en-blender/",
+        url: "https://www.youtube.com/watch?v=qxU8WhJZlb0",
     },
     {
         image: masterImage2,
         title: "Máster en Escultura para Impresión 3D",
         professor: "Oscar Fernández ",
         technology: ZBrush,
-        url: "https://libel.academy/libel/master-escultura-para-impresion-3d/",
+        url: "https://www.youtube.com/watch?v=QxBoSd1ckqc",
     },
     {
         image: masterImage3,
         title: "Máster en Rigging para animación y videojuegos ",
         professor: "Fernando Saltos",
         technology: Maya,
-        url: "https://libel.academy/libel/rigging-para-videojuegos/",
+        url: "https://www.youtube.com/watch?v=chJJRqvsQWE",
     },
     {
         image: masterImage4,
         title: "Escuela ZBrush",
         professor: "Manuel Jordan",
         technology: ZBrush,
-        url: "https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush",
+        url: "https://www.youtube.com/watch?v=x4p2eu-6U_Q",
     },
 ];
 

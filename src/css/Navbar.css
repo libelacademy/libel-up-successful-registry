@@ -44,36 +44,48 @@
     gap: 0px 0px;
     grid-template-areas: "search shortcuts";
     grid-area: navigation;
-    /* padding: 0px 20px; */
-    /* padding-left: 20px; */
 }
 
-.search {
+.nav-countdown {
     grid-area: search;
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    justify-content: flex-start;
+    gap: 0px 10px;
+    margin-left: 10px;
 }
 
-.search input {
-    font-size: 16px;
-    padding: 5px 0px;
-    border: none;
-    background: transparent;
-    outline: none;
-    color: #ffffff;
+.nav-countdown-image {
+    /* width: 50%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.search input:-webkit-autofill {
-    box-shadow: 0 0 0 1000px #000000 inset !important;
-    -webkit-box-shadow: 0 0 0 1000px #000000 inset !important;
-    -webkit-text-fill-color: white !important;
+.nav-countdown-image img {
+    max-height: 50px;
+    object-fit: contain;
 }
-
-.search-icon {
-    color: #fafafa;
-    margin-right: 10px;
-    font-size: 16px;
+.nav-countdown-timer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-countdown-segment {
+    width: 20px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-countdown-letters {
+    font-size: 10px;
+}
+.nav-countdown-numbers {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .shortcuts {
@@ -138,7 +150,8 @@
 }
 
 .menu-list,
-.menu-icon, .menu-academy {
+.menu-icon,
+.menu-academy {
     display: none;
 }
 
@@ -222,11 +235,21 @@
     justify-content: center;
 }
 
+.menu-countdown,
+.menu-academy,
+.menu-shortcuts,
+.menu-list-close {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .navbar-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .nav-countdown {
+        display: none;
+    }
     .academy {
         padding-left: 20px;
     }
@@ -288,25 +311,116 @@
         flex-direction: column;
         align-items: center;
         /* justify-content: space-evenly; */
-        font-size: 36px;
         -webkit-backdrop-filter: blur(30px);
         backdrop-filter: blur(30px);
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: var(--base-3);
+        padding: 20px;
     }
 
-    .menu-academy {
+    .menu-countdown {
         width: 100%;
-        height: 300px;
-        border-bottom: 1px solid;
+        height: 120px;
+        border-radius: 10px;
+        background-color: var(--base-1);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+        padding: 10px;
         display: flex;
-        flex-direction: column;
+        color: white;
+    }
+
+    .menu-countdown-image {
+        width: 50%;
+        height: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .login-mobile {
-        border: 1px solid rgba(176, 176, 176, 0.8);
-        padding: 10px 20px;
+    .menu-countdown-timer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .menu-countdown-segment {
+        width: 20px;
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-countdown-letters {
+        font-size: 10px;
+    }
+    .menu-countdown-numbers {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .menu-academy {
+        width: 100%;
+        height: 100px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 20px 0px;
+    }
+
+    .menu-academy a {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        width: 130px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .menu-shortcuts {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-shortcuts li {
+        list-style: none;
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-shortcuts a {
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .menu-list-close {
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 24px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 24px);
     }
 }
 

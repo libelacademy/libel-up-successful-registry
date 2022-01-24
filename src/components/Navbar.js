@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../css/Navbar.css";
 
-import { IoCaretDown, IoCaretUp, IoMenu } from "react-icons/io5";
+import { IoCaretDown, IoCaretUp, IoClose, IoMenu } from "react-icons/io5";
 
 import logo from "../images/logo.png";
+import lo3dCamp from "../images/3d-camp-logo.png"
 
 import bulletPoint1 from "../images/courses-list/002-gantt chart.png";
 import bulletPoint2 from "../images/courses-list/021-mail.png";
@@ -16,6 +17,17 @@ import bulletPoint7 from "../images/courses-list/093-idea.png";
 import coursesPreviewList from "../utils/previewCourses";
 import SlideShow from "./sliders/SlideShow";
 
+import { getRemainingTimeUntilMsTimestamp } from "../utils/countdown";
+
+const defaultRemainingTime = {
+    seconds: "00",
+    minutes: "00",
+    hours: "00",
+    days: "00",
+};
+
+
+
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [showMenu, setShowMenu] = useState("none");
@@ -26,6 +38,9 @@ const Navbar = () => {
     });
     const [courseColor, setCourseColor] = useState("#ffffff");
     const [top, setTop] = useState("-100%");
+    const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
+
+    const countdownTimestampMs = 1644696000000;
 
     useEffect(() => {
         if (menu) {
@@ -53,6 +68,17 @@ const Navbar = () => {
         }
     };
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            updateRemainingTime(countdownTimestampMs);
+        }, 1000);
+        return () => clearInterval(intervalId);
+    }, [countdownTimestampMs]);
+
+    function updateRemainingTime(countdown) {
+        setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
+    }
+
     return (
         <div className="Navbar">
             <div className="navbar-container container">
@@ -62,9 +88,38 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navigation">
-                    <div className="search">
+                    <div className="nav-countdown">
                         {/* <IoSearch className="search-icon" />
                         <input type="text" name="search" placeholder="Buscar" /> */}
+                        <div className="nav-countdown-image">
+                            <img src={lo3dCamp} alt="3D Camp" />
+                        </div>
+                        <div className="nav-countdown-timer">
+                            <div className="nav-countdown-segment">
+                                <div className="nav-countdown-letters">DIA</div>
+                                <div className="nav-countdown-numbers">
+                                    {remainingTime.days}
+                                </div>
+                            </div>
+                            <div className="nav-countdown-segment">
+                                <div className="nav-countdown-letters">HOR</div>
+                                <div className="nav-countdown-numbers">
+                                    {remainingTime.hours}
+                                </div>
+                            </div>
+                            <div className="nav-countdown-segment">
+                                <div className="nav-countdown-letters">MIN</div>
+                                <div className="nav-countdown-numbers">
+                                    {remainingTime.minutes}
+                                </div>
+                            </div>
+                            <div className="nav-countdown-segment">
+                                <div className="nav-countdown-letters">SEG</div>
+                                <div className="nav-countdown-numbers">
+                                    {remainingTime.seconds}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="shortcuts">
                         <a href="https://libel.academy/zbrush/">Licencias</a>
@@ -121,28 +176,104 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ul className="menu-list" style={{ display: `${showMenu}` }}>
+                    <div className="menu-countdown">
+                        <div className="menu-countdown-image">
+                            <img src={lo3dCamp} alt="3D Camp" />
+                        </div>
+                        <div className="menu-countdown-timer">
+                            <div className="menu-countdown-segment">
+                                <div className="menu-countdown-letters">
+                                    DIA
+                                </div>
+                                <div className="menu-countdown-numbers">
+                                    {remainingTime.days}
+                                </div>
+                            </div>
+                            <div className="menu-countdown-segment">
+                                <div className="menu-countdown-letters">
+                                    HOR
+                                </div>
+                                <div className="menu-countdown-numbers">
+                                    {remainingTime.hours}
+                                </div>
+                            </div>
+                            <div className="menu-countdown-segment">
+                                <div className="menu-countdown-letters">
+                                    MIN
+                                </div>
+                                <div className="menu-countdown-numbers">
+                                    {remainingTime.minutes}
+                                </div>
+                            </div>
+                            <div className="menu-countdown-segment">
+                                <div className="menu-countdown-letters">
+                                    SEG
+                                </div>
+                                <div className="menu-countdown-numbers">
+                                    {remainingTime.seconds}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="menu-academy">
                         <a
                             href="https://cursos.libel.academy/users/sign_up"
-                            target={"_blank"}
-                            rel="noreferrer"
                             className="register-mobile"
                         >
                             Crear cuenta
                         </a>
                         <a
                             href="https://cursos.libel.academy/users/sign_in"
-                            target={"_blank"}
-                            rel="noreferrer"
                             className="login-mobile"
                         >
                             Entrar
                         </a>
                     </div>
                     <div className="menu-shortcuts">
-                        <li>Licencias</li>
-                        <li>Cursos</li>
+                        <li>
+                            <a href="https://cursos.libel.academy/collections?category=courses">
+                                Cursos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://libel.academy/libel/master/">
+                                Masters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush">
+                                Escuela Zbrush
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://aprende-blender.libel.academy/">
+                                Escuela Blender
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cursos.libel.academy/collections?q=Rigging">
+                                Escuela Rigging
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cursos.libel.academy/collections?q=concep">
+                                Escuela Ilustración
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://libel.academy/zbrush/">
+                                Licencias
+                            </a>
+                        </li>
                     </div>
+                    <button
+                        className="menu-list-close"
+                        onClick={() => {
+                            setMenu(!menu);
+                        }}
+                    >
+                        <IoClose />
+                    </button>
                 </ul>
             </div>
             <div
