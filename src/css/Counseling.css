@@ -94,8 +94,8 @@
 .agenda:hover {
     background: linear-gradient(
         110deg,
-        rgba(96, 0, 222, 0.8) 20%,
-        rgba(0, 255, 255, 0.6) 60%
+        rgba(96, 0, 222, 0.8) 0%,
+        rgba(0, 255, 255, 0.6) 0%
     );
 }
 

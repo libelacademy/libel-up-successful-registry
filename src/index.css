@@ -20,6 +20,21 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.nav-buttons {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--primary-blue);
+    color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .container {
     width: 100%;
     max-width: 1440px;
@@ -83,6 +98,19 @@ textarea::-webkit-scrollbar-track {
 textarea::-webkit-scrollbar-track:hover,
 textarea::-webkit-scrollbar-track:active {
   background: #bababa;
+}
+
+.NavButton {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

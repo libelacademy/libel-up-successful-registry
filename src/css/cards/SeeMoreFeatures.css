@@ -1,6 +1,6 @@
 .SeeMoreFeatures {
-        width: 360px;
-    height: 350px;
+     width: 310px;
+    height: 340px;
     background-color: var(--base-3);
     color: white;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
@@ -19,17 +19,5 @@
 @media (max-width: 1024px) {
     .SeeMoreFeatures {
         width: 300px;
-    }
-}
-
-@media (max-width: 460px) {
-    .SeeMoreFeatures {
-        width: 350px;
-    }
-}
-
-@media (max-width: 320px) {
-    .SeeMoreFeatures {
-        width: 310px;
     }
 }

@@ -34,3 +34,18 @@
     position: absolute;
     right: 10px;
 }
+
+
+.DegradeButton:hover {
+        background: linear-gradient(
+        110deg,
+        rgba(96, 0, 222, 0.8) 0%,
+        rgba(0, 255, 255, 0.6) 0%
+    );
+}
+
+
+.DegradeButton:hover .create-account {
+    background-color: var(--primary-blue);
+
+}

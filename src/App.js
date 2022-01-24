@@ -6,6 +6,7 @@ import Courses from './components/Courses';
 import FAQ from './components/FAQ';
 import FeaturedResults from './components/FeaturedResults';
 import Footer from './components/Footer';
+import Header from './components/Header';
 import Masters from './components/Masters';
 import Memberships from './components/Memberships';
 import Navbar from './components/Navbar';
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Header />
       <Masters />
       <Courses />
       <Convert3DPro />

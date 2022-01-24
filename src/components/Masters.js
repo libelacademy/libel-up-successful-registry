@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import "../css/Masters.css";
 
@@ -7,10 +7,12 @@ import dot from "../images/logo_dot.png";
 import masters from "../utils/featruredMasters";
 import Master from "./cards/Master";
 
+import Carousel from "react-elastic-carousel";
+
+import decorationRight from "../images/decorations/01.png";
+
 const Masters = () => {
-
-
-    const [position, setPosition] = useState(0);
+    const carousel = useRef(null);
 
     const masterList = masters.map((master, i) => (
         <Master
@@ -23,21 +25,22 @@ const Masters = () => {
         />
     ));
 
-            const nextPosition = () => {
-                setPosition(
-                    position === masterList.length - 1 ? 0 : position + 1
-                );
-            };
-
-            const previousPosition = () => {
-                setPosition(
-                    position === 0 ? masterList.length - 1 : position - 1
-                );
-            };
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 460, itemsToShow: 2, itemsToScroll: 1 },
+        { width: 768, itemsToShow: 4, itemsToScroll: 1 },
+        { width: 1200, itemsToShow: 4, itemsToScroll: 1 },
+    ];
 
     return (
         <div className="Masters">
             <div className="masters-container container padding">
+                <img
+                    src={decorationRight}
+                    alt="Master Decoration Right"
+                    className="master-decoration-right"
+                />
+
                 <div className="masters-header">
                     <div className="masters-title">
                         <img src={dot} alt="Libel Dot" />
@@ -49,14 +52,14 @@ const Masters = () => {
                     </div>
                     <div className="masters-text">
                         <h2>
-                            !Obtén <br />
+                            ¡Obtén <br />
                             <span className="color">
                                 sorprendentes
                                 <br />
                                 resultados
                             </span>{" "}
                             en <br />
-                            corto tiempo¡
+                            corto tiempo!
                         </h2>
                         <p>
                             No necesitas de conocimientos
@@ -88,25 +91,31 @@ const Masters = () => {
                     <div className="masters-column-3">{masterList[3]}</div>
                 </div>
                 <div className="masters-content-mobile">
-                    {masterList[position]}
-                    <div className="results-buttons">
-                        <button
-                            className="result-previous"
-                            onClick={() => {
-                                previousPosition();
-                            }}
-                        >
-                            <IoChevronBack />
-                        </button>
-                        <button
-                            className="result-next"
-                            onClick={() => {
-                                nextPosition();
-                            }}
-                        >
-                            <IoChevronForward />
-                        </button>
-                    </div>
+                    <Carousel
+                        ref={carousel}
+                        breakPoints={breakPoints}
+                        pagination={false}
+                        showArrows={false}
+                        className="masters-carousel"
+                    >
+                        {masterList}
+                    </Carousel>
+                    <button
+                        className="nav-buttons masters-previous"
+                        onClick={() => {
+                            carousel.current.slidePrev();
+                        }}
+                    >
+                        <IoChevronBack />
+                    </button>
+                    <button
+                        className="nav-buttons masters-next"
+                        onClick={() => {
+                            carousel.current.slideNext();
+                        }}
+                    >
+                        <IoChevronForward />
+                    </button>
                 </div>
             </div>
         </div>

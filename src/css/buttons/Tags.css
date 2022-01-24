@@ -3,7 +3,7 @@
     border-radius: 24px;
     -webkit-backdrop-filter: blur(25.8px);
   backdrop-filter: blur(25.8px);
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.2);
 
   position: relative;
   color: white;
@@ -14,10 +14,11 @@
   align-items: center;
   text-decoration: none;
   color: white;
-  margin: 0px 10px;
+
   cursor: pointer;
   border: none;
   text-transform: uppercase;
+  align-self: center;
 }
 
 .Tags a {
@@ -51,17 +52,4 @@
 
 .tag-active {
   background-color: var(--primary-blue);
-}
-
-@media (max-width:860px) {
-  .Tags {
-    margin: 0px 5px;
-  }
-}
-
-
-@media (max-width:460px) {
-  .Tags {
-    margin: 10px 0px;
-  }
 }

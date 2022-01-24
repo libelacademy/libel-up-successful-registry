@@ -1,35 +1,29 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import "../css/Convert3DPro.css";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 import line from "../images/underline.png";
 import technologies from "../utils/profesional3d";
 
+import Carousel from "react-elastic-carousel";
+
 const Convert3DPro = () => {
-    const [position, setPosition] = useState(0);
+
+    const carousel = useRef(null);
+
 
     const technologiesList = technologies.map((tech) => (
         <img key={tech} src={tech} alt="technology 3d" />
     ));
-    const technologiesGroups = [
-        [technologiesList[0], technologiesList[1]],
-        [technologiesList[2], technologiesList[3]],
-        [technologiesList[4], technologiesList[5]],
+
+    const breakPoints = [
+        { width: 1, itemsToShow: 1, itemsToScroll: 1 },
+        { width: 375, itemsToShow: 2, itemsToScroll: 1 },
+        { width: 768, itemsToShow: 6, itemsToScroll: 1 },
+        { width: 1200, itemsToShow: 6, itemsToScroll: 1 },
     ];
 
-        const nextPosition = () => {
-            setPosition(
-                position === technologiesGroups.length - 1 ? 0 : position + 1
-            );
-        };
-
-        const previousPosition = () => {
-            setPosition(
-                position === 0 ? technologiesGroups.length - 1 : position - 1
-            );
-        };
-
-    return (
+     return (
         <div className="Convert3DPro">
             <div className="convert-container container padding">
                 <div className="convert-header">
@@ -48,29 +42,34 @@ const Convert3DPro = () => {
                         mercado.
                     </p>
                 </div>
-                <div className="convert-content">{technologiesList}</div>
-                <div className="convert-content-mobile">
-                    <div className="convert-technologies">
-                        {technologiesGroups[position]}
-                    </div>
-                    <div className="results-buttons">
-                        <button
-                            className="result-previous"
-                            onClick={() => {
-                                previousPosition();
-                            }}
-                        >
-                            <IoChevronBack />
-                        </button>
-                        <button
-                            className="result-next"
-                            onClick={() => {
-                                nextPosition();
-                            }}
-                        >
-                            <IoChevronForward />
-                        </button>
-                    </div>
+                <div className="convert-content">
+                    <Carousel
+                        ref={carousel}
+                        breakPoints={breakPoints}
+                        pagination={false}
+                        showArrows={false}
+                        
+                        className="convert-carousel"
+                    >
+                        {technologiesList}
+                    </Carousel>
+                    <button
+                        className="nav-buttons convert-previous"
+                        onClick={() => {
+                            carousel.current.slidePrev();
+                        }}
+                    >
+                        <IoChevronBack />
+                    </button>
+
+                    <button
+                        className="results-buttons convert-next"
+                        onClick={() => {
+                            carousel.current.slideNext();
+                        }}
+                    >
+                        <IoChevronForward />
+                    </button>
                 </div>
             </div>
         </div>

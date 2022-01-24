@@ -49,20 +49,33 @@
     color: var(--base-3);
 }
 
-.convert-content-mobile {
-    display: none;
-}
 
 .convert-content {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-top: 60px;
+    display: grid;
+    grid-template-columns: 0.1fr 2.8fr 0.1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "convert-previous convert-carousel convert-next";
+}
+.convert-carousel {
+    grid-area: convert-carousel;
+    align-self: center;
+    justify-self: center;
+}
+.convert-previous {
+    grid-area: convert-previous;
+    align-self: center;
+    justify-self: center;
+}
+.convert-next {
+    grid-area: convert-next;
+    align-self: center;
+    justify-self: center;
 }
 
 @media (max-width: 860px) {
-
     .Convert3DPro {
         height: 550px;
     }
@@ -81,35 +94,21 @@
     }
 
     .convert-underline {
-    width: 420px;
-    position: absolute;
-    bottom: -10px;
-    left: calc(50% - 210px);
-}
+        width: 420px;
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 210px);
+    }
 
     .convert-header p {
         width: 100%;
         text-align: center;
-
-    }
-
-    .convert-content {
-        display: none;
-    }
-
-    .convert-content-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 60px;
     }
 
     .convert-technologies img {
         margin: 0px 10px;
     }
 }
-
 
 @media (max-width: 460px) {
     .Convert3DPro {
@@ -124,14 +123,14 @@
     }
 
     .convert-underline {
-    width: 320px;
-    position: absolute;
-    bottom: -10px;
-    left: calc(50% - 160px);
-}
+        width: 320px;
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 160px);
+    }
 }
 
-@media (max-width:320px) {
+@media (max-width: 320px) {
     .convert-header h1 {
         width: 100%;
         font-size: 32px;
@@ -144,9 +143,9 @@
     }
 
     .convert-underline {
-    width: 280px;
-    position: absolute;
-    bottom: -5px;
-    left: calc(50% - 140px);
-}
+        width: 280px;
+        position: absolute;
+        bottom: -5px;
+        left: calc(50% - 140px);
+    }
 }

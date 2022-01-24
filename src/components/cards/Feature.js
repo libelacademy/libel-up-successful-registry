@@ -2,15 +2,27 @@ import React from "react";
 import "../../css/cards/Feature.css";
 
 import { IoPlay } from "react-icons/io5";
+import { useDispatch } from "react-redux";
 
-const Feature = ({ image, name, title, course }) => {
+import { openVideo } from "../../features/video";
+
+const Feature = ({ image, name, title, course, url }) => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className="Feature">
             <div
                 className="feature-header"
                 style={{ backgroundImage: ` url(${image})` }}
             >
-                <button className="feature-video">
+                <button
+                    className="feature-video"
+                    onClick={() => {
+                        // handleOpenModal(true);
+                        dispatch(openVideo({ modal: true, url: url }));
+                    }}
+                >
                     <IoPlay />
                 </button>
             </div>
