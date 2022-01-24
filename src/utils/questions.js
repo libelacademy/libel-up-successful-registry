@@ -23,7 +23,7 @@ const questions = [
                 <p style={{ marginBottom: 10 }}>
                     Todos los cursos en los que estás inscritos aparecerán en tu
                     perfil, sección “mi portal”, es por ello por lo que debes
-                    crear un perfil en nuestra plataforma de estudio:
+                    crear un perfil en nuestra plataforma de estudio:{" "}
                     <a href="https://cursos.libel.academy/users/sign_up">
                         https://cursos.libel.academy/users/sign_up
                     </a>

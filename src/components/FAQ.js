@@ -6,6 +6,7 @@ import Question from "./cards/Question";
 
 import image from "../images/faq-image.png";
 import line from "../images/line.png";
+import { IoChevronForward } from "react-icons/io5";
 
 const FAQ = () => {
 
@@ -27,7 +28,7 @@ const FAQ = () => {
                         <img src={image} alt="FAQ" />
                     </div>
                     <div className="faq-questions">
-                        <div>
+                        <div className="faq-questions-container">
                             <Question
                                 id={questions[0].id}
                                 question={questions[0].question}
@@ -52,42 +53,7 @@ const FAQ = () => {
                                 answer={questions[3].answer}
                                 handleQuestion={handleQuestion}
                             />
-                            <Question
-                                id={questions[4].id}
-                                question={questions[4].question}
-                                answer={questions[4].answer}
-                                handleQuestion={handleQuestion}
-                            />
-                            <Question
-                                id={questions[5].id}
-                                question={questions[5].question}
-                                answer={questions[5].answer}
-                                handleQuestion={handleQuestion}
-                            />
-                            <Question
-                                id={questions[6].id}
-                                question={questions[6].question}
-                                answer={questions[6].answer}
-                                handleQuestion={handleQuestion}
-                            />
-                            <Question
-                                id={questions[7].id}
-                                question={questions[7].question}
-                                answer={questions[7].answer}
-                                handleQuestion={handleQuestion}
-                            />
-                            <Question
-                                id={questions[8].id}
-                                question={questions[8].question}
-                                answer={questions[8].answer}
-                                handleQuestion={handleQuestion}
-                            />
-                            <Question
-                                id={questions[9].id}
-                                question={questions[9].question}
-                                answer={questions[9].answer}
-                                handleQuestion={handleQuestion}
-                            />
+                            <a href={"https://libel.academy/preguntas-frecuentes"} className="more-questions">VER MAS PREGUNTAS{" "}<IoChevronForward/></a>
                         </div>
                         <a
                             href="https://calendly.com/libel"

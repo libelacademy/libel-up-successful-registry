@@ -35,7 +35,7 @@ const Course = ({
                     <img src={avatar} alt="teacher" />
                 </div>
                 <div className="course-information-price">
-                    <span className="price">${price}</span>
+                    <span className="price">${price}<sup>USD</sup></span>
                     <div className="line"></div>
                 </div>
                 <div className="course-information-text">

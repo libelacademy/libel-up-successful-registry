@@ -4,6 +4,9 @@ import image3 from "../images/courses/Image3.png";
 import image4 from "../images/courses/Image4.png";
 import image5 from "../images/courses/Image5.png";
 import image6 from "../images/courses/Image6.png";
+import image7 from "../images/courses/Image7.png";
+import image8 from "../images/courses/Image8.jpeg";
+import image9 from "../images/courses/Image9.png"
 
 import avatar1 from "../images/courses/Avatars1.png";
 import avatar2 from "../images/courses/Avatars2.png";
@@ -14,6 +17,7 @@ import avatar6 from "../images/courses/Avatars6.png";
 
 import zbrush from "../images/professional3d/Imagen 1.png";
 import blender from "../images/professional3d/Imagen 7.png";
+import maya from "../images/professional3d/Imagen 4.png";
 
 const courses = [
     {
@@ -49,6 +53,39 @@ const courses = [
         url: "https://libel.academy/libel/personajes-para-videojuegos/",
         tag: "cursos",
     },
+    {
+        title: " Aprende RIG en maya",
+        price: "39.00",
+        info: "Es tu gran oportunidad de aprender Rigging y hacer tu primera animación.",
+        image: image9,
+        avatar: avatar1,
+        software: maya,
+        start: false,
+        url: "https://cursos.libel.academy/courses/rigging-de-personajes-para-animacion-3d-camp",
+        tag: "cursos",
+    },
+    {
+        title: "Salamandra en ZBRUSH",
+        price: "39.9",
+        info: "Aprende paso a paso y crea personajes para concept en ZBRUSH.",
+        image: image8,
+        avatar: avatar2,
+        software: zbrush,
+        start: false,
+        url: "https://cursos.libel.academy/courses/personajes-en-zbrush-3d-camp",
+        tag: "cursos",
+    },
+    {
+        title: "Escultura y modelado en Blender",
+        price: "49.00",
+        info: "Unimos la escultura y el modelado en Blender para desarrollar este fantástico personaje con accesorios HARDSURFACE.",
+        image: image7,
+        avatar: avatar3,
+        software: blender,
+        start: false,
+        url: "https://cursos.libel.academy/courses/personaje-en-blender-para-impresion-3d-camp",
+        tag: "cursos",
+    },
     //
     {
         title: "Máster Personaje Videojuegos AAA",
@@ -84,6 +121,39 @@ const courses = [
         url: "https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush",
         tag: "master",
     },
+    {
+        title: " Aprende RIG en maya",
+        price: "39.00",
+        info: "Es tu gran oportunidad de aprender Rigging y hacer tu primera animación.",
+        image: image9,
+        avatar: avatar1,
+        software: maya,
+        start: false,
+        url: "https://cursos.libel.academy/courses/rigging-de-personajes-para-animacion-3d-camp",
+        tag: "master",
+    },
+    {
+        title: "Salamandra en ZBRUSH",
+        price: "39.9",
+        info: "Aprende paso a paso y crea personajes para concept en ZBRUSH.",
+        image: image8,
+        avatar: avatar2,
+        software: zbrush,
+        start: false,
+        url: "https://cursos.libel.academy/courses/personajes-en-zbrush-3d-camp",
+        tag: "master",
+    },
+    {
+        title: "Escultura y modelado en Blender",
+        price: "49.00",
+        info: "Unimos la escultura y el modelado en Blender para desarrollar este fantástico personaje con accesorios HARDSURFACE.",
+        image: image7,
+        avatar: avatar3,
+        software: blender,
+        start: false,
+        url: "https://cursos.libel.academy/courses/personaje-en-blender-para-impresion-3d-camp",
+        tag: "master",
+    },
     //
 
     {
@@ -117,6 +187,40 @@ const courses = [
         software: zbrush,
         start: false,
         url: "https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush",
+        tag: "camp",
+    },
+
+    {
+        title: " Aprende RIG en maya",
+        price: "39.00",
+        info: "Es tu gran oportunidad de aprender Rigging y hacer tu primera animación.",
+        image: image9,
+        avatar: avatar1,
+        software: maya,
+        start: false,
+        url: "https://cursos.libel.academy/courses/rigging-de-personajes-para-animacion-3d-camp",
+        tag: "camp",
+    },
+    {
+        title: "Salamandra en ZBRUSH",
+        price: "39.9",
+        info: "Aprende paso a paso y crea personajes para concept en ZBRUSH.",
+        image: image8,
+        avatar: avatar2,
+        software: zbrush,
+        start: false,
+        url: "https://cursos.libel.academy/courses/personajes-en-zbrush-3d-camp",
+        tag: "camp",
+    },
+    {
+        title: "Escultura y modelado en Blender",
+        price: "49.00",
+        info: "Unimos la escultura y el modelado en Blender para desarrollar este fantástico personaje con accesorios HARDSURFACE.",
+        image: image7,
+        avatar: avatar3,
+        software: blender,
+        start: false,
+        url: "https://cursos.libel.academy/courses/personaje-en-blender-para-impresion-3d-camp",
         tag: "camp",
     },
     // ##############################################################################3

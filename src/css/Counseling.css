@@ -7,13 +7,14 @@
     justify-content: center;
     background-color: var(--base-1);
     color: white;
+    overflow: hidden;
 }
 
 .counseling-container {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .decoration-left {
@@ -29,9 +30,10 @@
 }
 
 .Counseling h1 {
-    max-width: 500px;
+    /* max-width: 500px; */
     font-size: 48px;
     text-align: left;
+    line-height: 1.09;
 }
 
 .Counseling h1 span {
@@ -101,21 +103,23 @@
 
 @media (max-width: 1280pc) {
     .decoration-left {
-        left: -30%;
+        left: -35%;
     }
 
     .decoration-right {
-        right: -30%;
+        right: -35%;
     }
 }
 
 @media (max-width: 1024px) {
     .decoration-left {
-        left: -43%;
+        left: -45%;
+        bottom: -20%;
     }
 
     .decoration-right {
-        right: -45%;
+        
+        right: -48%;
     }
 }
 
@@ -143,6 +147,8 @@
 
     .counseling-container {
         flex-direction: column;
+    justify-content: center;
+
     }
 
     .Counseling h1 {

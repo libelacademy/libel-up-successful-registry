@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 
 import "../css/Financing.css";
-import dot from "../images/logo_dot_dark.png";
 import line from "../images/underline.png";
 
 

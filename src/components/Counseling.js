@@ -14,7 +14,7 @@ const Counseling = () => {
                     className="decoration-left"
                 />
                 <h1>
-                    Asiste a una <span>asesoría</span> grupal gratuita
+                    Asiste a una <span>asesoría</span><br/> grupal gratuita
                     <span>.</span>
                 </h1>
                 <div className="counseling-content">

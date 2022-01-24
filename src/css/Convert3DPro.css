@@ -25,7 +25,7 @@
 .convert-header h1 {
     width: 60%;
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.09;
     position: relative;
 }
@@ -35,7 +35,7 @@
 }
 
 .convert-underline {
-    width: 520px;
+    width: 530px;
     position: absolute;
     bottom: -10px;
     left: 0;

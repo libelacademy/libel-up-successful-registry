@@ -51,7 +51,7 @@ const SlideShow = ({ courses }) => {
             slideshow.current.style.transform = `translate(-${slideSize}px)`;
 
             setTimeout(() => {
-                slideshow.current.style.transition = `2000ms ease-out all`;
+                slideshow.current.style.transition = `500ms ease-out all`;
 
                 slideshow.current.style.transform = `translateX(0)`;
             }, 30);

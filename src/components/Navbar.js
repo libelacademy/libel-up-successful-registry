@@ -89,10 +89,11 @@ const Navbar = () => {
                 </div>
                 <div className="navigation">
                     <div className="nav-countdown">
-                        {/* <IoSearch className="search-icon" />
-                        <input type="text" name="search" placeholder="Buscar" /> */}
-                        <div className="nav-countdown-image">
+                        <a href="https://libel.academy/3d-camp" className="nav-countdown-image">
                             <img src={lo3dCamp} alt="3D Camp" />
+                        </a>
+                        <div className="nav-countdown-title">
+                            3D CAMP <br /> ONLINE - EN VIVO
                         </div>
                         <div className="nav-countdown-timer">
                             <div className="nav-countdown-segment">

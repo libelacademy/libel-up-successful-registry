@@ -19,7 +19,10 @@ const benefits = [
         title: "Premiamos la excelencia",
         body: "Brindamos becas a los estudiantes que obtengan resultados excelentes.",
     },
-
+    {
+        title: "Estudia 100% online desde cualquier parte del mundo",
+        body: "No limites tu aprendizaje, hoy puedes estudiar desde cualquier parte del mundo de habla hispana.",
+    },
 ];
 
 

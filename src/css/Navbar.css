@@ -22,7 +22,7 @@
 
 .navbar-container {
     display: grid;
-    grid-template-columns: 25% 45% 30%;
+    grid-template-columns: 25% 50% 25%;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "home navigation academy";
@@ -38,21 +38,21 @@
 }
 .navigation {
     grid-area: navigation;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas: "search shortcuts";
+    display: grid; 
+  grid-template-columns: 1.3fr 0.7fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "nav-countdown shortcuts"; 
     grid-area: navigation;
 }
 
 .nav-countdown {
-    grid-area: search;
+    grid-area: nav-countdown;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0px 10px;
-    margin-left: 10px;
+    justify-content: space-evenly;
+    border-right: 1px solid var(--line);
 }
 
 .nav-countdown-image {
@@ -66,15 +66,21 @@
     max-height: 50px;
     object-fit: contain;
 }
+
+.nav-countdown-title {
+        font-weight: 700;
+    line-height: 1.09;
+    text-align: center;
+}
+
 .nav-countdown-timer {
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 .nav-countdown-segment {
-    width: 20px;
+    width: 35px;
     height: 45px;
     display: flex;
     flex-direction: column;
@@ -92,12 +98,11 @@
     grid-area: shortcuts;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
 .Navbar .nav-courses {
     color: #ffffff;
-    margin: 0px 20px;
     height: 100%;
     border: none;
     font-size: 16px;
@@ -246,6 +251,18 @@
     .navbar-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .navigation {
+    grid-area: navigation;
+    display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "shortcuts"; 
+    grid-area: navigation;
+}
+
 
     .nav-countdown {
         display: none;

@@ -17,7 +17,7 @@ const Benefits = () => {
 
     const benefitsGroups = [
         [benefitsList[0], benefitsList[1], benefitsList[2]],
-        [benefitsList[3], benefitsList[4]],
+        [benefitsList[3], benefitsList[4], benefitsList[5]],
     ];
 
     const [position, setPosition] = useState(0);
@@ -144,6 +144,16 @@ const Benefits = () => {
                             <button
                                 className={
                                     position === 4
+                                        ? "benefits-nav-dot-active"
+                                        : "benefits-nav-dot"
+                                }
+                                onClick={() => {
+                                    setPosition(4);
+                                }}
+                            ></button>
+                            <button
+                                className={
+                                    position === 5
                                         ? "benefits-nav-dot-active"
                                         : "benefits-nav-dot"
                                 }

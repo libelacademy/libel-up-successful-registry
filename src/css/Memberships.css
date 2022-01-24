@@ -60,6 +60,10 @@
     margin-top: 60px;
 }
 
+.Memberships .rec-item-wrapper {
+    height: 360px;
+}
+
 .memberships-previous,
 .memberships-next {
     display: none;

@@ -1,7 +1,7 @@
 .SeeMoreFeatures {
      width: 310px;
     height: 340px;
-    background-color: var(--base-3);
+    background-color: var(--base-1);
     color: white;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     display: flex;
