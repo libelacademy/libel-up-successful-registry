@@ -7,7 +7,7 @@ import dot from "../images/logo_dot.png";
 import masters from "../utils/featruredMasters";
 import Master from "./cards/Master";
 
-import Carousel from "react-elastic-carousel";
+import Carousel, { consts } from "react-elastic-carousel";
 
 import decorationRight from "../images/decorations/01.png";
 
@@ -22,14 +22,36 @@ const Masters = () => {
             professor={master.professor}
             title={master.title}
             technology={master.technology}
+            master={master.master}
         />
     ));
 
+    const customArrows = ({ type, onClick, isEdge }) => {
+        const pointer =
+            type === consts.PREV ? <IoChevronBack/> : <IoChevronForward />;
+        return (
+            <button
+                onClick={onClick}
+                disabled={isEdge}
+                style={{
+                    fontSize: 36,
+                    border: "none",
+                    backgroundColor: "transparent",
+                    color: "white",
+                    position: "relative",
+                    
+                }}
+            >
+                {pointer}
+            </button>
+        );
+    };
+
     const breakPoints = [
-        { width: 1, itemsToShow: 1 },
+        { width: 1, itemsToShow: 1},
         { width: 460, itemsToShow: 2, itemsToScroll: 1 },
-        { width: 768, itemsToShow: 4, itemsToScroll: 1 },
-        { width: 1200, itemsToShow: 4, itemsToScroll: 1 },
+        { width: 768, itemsToShow: 4, itemsToScroll: 1, showArrows: false },
+        { width: 1200, itemsToShow: 4, itemsToScroll: 1, showArrows: false },
     ];
 
     return (
@@ -95,19 +117,18 @@ const Masters = () => {
                         ref={carousel}
                         breakPoints={breakPoints}
                         pagination={false}
-                        showArrows={false}
+                        renderArrow={customArrows}
                         className="masters-carousel"
                     >
                         {masterList}
                     </Carousel>
-                    <button
-                        className="nav-buttons masters-previous"
+                    {/* <IoChevronBack
+                        className="masters-previous"
                         onClick={() => {
                             carousel.current.slidePrev();
                         }}
-                    >
-                        <IoChevronBack />
-                    </button>
+                    />
+
                     <button
                         className="nav-buttons masters-next"
                         onClick={() => {
@@ -115,7 +136,7 @@ const Masters = () => {
                         }}
                     >
                         <IoChevronForward />
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>

@@ -4,14 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Video from "./components/modals/Video";
+import AdvisoryGlobal from "./components/modals/AdvisoryGlobal";
 
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import videoReducer from "./features/video";
+import advisoryReducer from "./features/advisory";
+
 
 const store = configureStore({
     reducer: {
         video: videoReducer,
+        advisory: advisoryReducer,
     },
 });
 
@@ -20,6 +24,7 @@ ReactDOM.render(
         <Provider store={store}>
             <App />
             <Video />
+            <AdvisoryGlobal />
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")

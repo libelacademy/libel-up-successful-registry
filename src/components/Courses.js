@@ -108,6 +108,8 @@ const Courses = () => {
                                   software={course.software}
                                   start={course.start}
                                   title={course.title}
+                                  url={course.url}
+                                  video={course.video}
                               />
                           ))
                         : courses.map((course, index) => (
@@ -120,6 +122,8 @@ const Courses = () => {
                                   software={course.software}
                                   start={course.start}
                                   title={course.title}
+                                  url={course.url}
+                                  video={course.video}
                               />
                           ))}
                 </div>

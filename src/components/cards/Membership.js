@@ -3,7 +3,6 @@ import "../../css/cards/Membership.css";
 
 
 const Membership = ({ image, icon, name, price, courses, url }) => {
-    console.log(image);
     return (
         <div className="Membership">
             <div className="membership-header">

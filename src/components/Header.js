@@ -45,12 +45,12 @@ const Header = () => {
         />,
         <Tags
             tag={"ESCUELA ZBRUSH"}
-            url="https://libel.academy/zbrush/"
+            url="https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush"
             width={215}
         />,
         <Tags
             tag={"3D CAMP"}
-            url="https://libel.academy/zbrush/"
+            url="https://libel.academy/3d-camp/"
             width={150}
         />,
     ];

@@ -14,6 +14,7 @@ const masters = [
         professor: "Ricardo Díaz",
         technology: Blender,
         url: "https://www.youtube.com/watch?v=qxU8WhJZlb0",
+        master: "https://libel.academy/libel/master-en-blender/",
     },
     {
         image: masterImage2,
@@ -21,6 +22,7 @@ const masters = [
         professor: "Oscar Fernández ",
         technology: ZBrush,
         url: "https://www.youtube.com/watch?v=QxBoSd1ckqc",
+        master: "https://libel.academy/libel/master-escultura-para-impresion-3d/",
     },
     {
         image: masterImage3,
@@ -28,6 +30,7 @@ const masters = [
         professor: "Fernando Saltos",
         technology: Maya,
         url: "https://www.youtube.com/watch?v=chJJRqvsQWE",
+        master: "https://libel.academy/libel/rigging-para-videojuegos/",
     },
     {
         image: masterImage4,
@@ -35,6 +38,7 @@ const masters = [
         professor: "Manuel Jordan",
         technology: ZBrush,
         url: "https://www.youtube.com/watch?v=x4p2eu-6U_Q",
+        master: "https://libel.academy/escuela-zbrush/",
     },
 ];
 

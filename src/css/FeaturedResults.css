@@ -83,29 +83,26 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6) inset;
 }
 
+.FeaturedResults .rec-slider-container {
+        margin: 0px;
+    }
+    
 @media (max-width: 860px) {
     .results-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1.8fr 0.2fr;
-        gap: 20px 0px;
-        grid-template-areas:
-            "results-carousel results-carousel"
-            "result-previous result-next";
+        display: flex;
     }
     .results-carousel {
         grid-area: results-carousel;
     }
     .result-previous {
         grid-area: result-previous;
+        display: none;
     }
     .result-next {
         grid-area: result-next;
+        display: none;
     }
 
-    /* .FeaturedResults .rec-carousel-wrapper {
-        width: 350px;
-    } */
 }
 
 @media (max-width: 460px) {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/Navbar.css";
 
-import { IoCaretDown, IoCaretUp, IoClose, IoMenu } from "react-icons/io5";
+import { IoCaretDown, IoCaretUp, IoMenu } from "react-icons/io5";
 
 import logo from "../images/logo.png";
 import lo3dCamp from "../images/3d-camp-logo.png"
@@ -83,17 +83,23 @@ const Navbar = () => {
         <div className="Navbar">
             <div className="navbar-container container">
                 <div className="home">
-                    <a className="logo" href="/">
+                    <a className="logo" href="https://libel.academy">
                         <img src={logo} alt="Libel Academy" />
                     </a>
                 </div>
                 <div className="navigation">
                     <div className="nav-countdown">
-                        <a href="https://libel.academy/3d-camp" className="nav-countdown-image">
+                        <a
+                            href="https://libel.academy/3d-camp"
+                            className="nav-countdown-image"
+                        >
                             <img src={lo3dCamp} alt="3D Camp" />
                         </a>
                         <div className="nav-countdown-title">
-                            3D CAMP <br /> ONLINE - EN VIVO
+                            3D CAMP <br />{" "}
+                            <a href="https://libel.academy/3d-camp">
+                                ONLINE - EN VIVO
+                            </a>
                         </div>
                         <div className="nav-countdown-timer">
                             <div className="nav-countdown-segment">
@@ -267,14 +273,6 @@ const Navbar = () => {
                             </a>
                         </li>
                     </div>
-                    <button
-                        className="menu-list-close"
-                        onClick={() => {
-                            setMenu(!menu);
-                        }}
-                    >
-                        <IoClose />
-                    </button>
                 </ul>
             </div>
             <div

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../css/cards/Question.css'
 import { IoChevronDown, IoChevronUp } from 'react-icons/io5'
 
-const Question = ({ id, question, answer, handleQuestion }) => {
+const Question = ({ id, question, answer}) => {
     const [active, setActive] = useState(false);
     const [visibility, setVisibility] = useState("none");
 
@@ -18,7 +18,6 @@ const Question = ({ id, question, answer, handleQuestion }) => {
                 }
                 onClick={() => {
                     setActive(!active);
-                    handleQuestion(id);
                 }}
             >
                 <p>{question}</p>

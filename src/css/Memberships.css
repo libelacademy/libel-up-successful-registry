@@ -61,8 +61,15 @@
 }
 
 .Memberships .rec-item-wrapper {
-    height: 360px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+    .Memberships .rec-slider-container {
+        margin: 0px;
+    }
+
 
 .memberships-previous,
 .memberships-next {
@@ -70,38 +77,31 @@
 }
 
 @media (max-width: 860px) {
+
+    .Memberships {
+        height: 600px;
+    }
+
     .memberships-previous,
     .memberships-next {
         display: flex;
     }
 
     .memberships-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1.5fr 0.5fr;
-        gap: 20px 0px;
-        grid-template-areas:
-            "memberships-carousel memberships-carousel"
-            "memberships-previous memberships-next";
-    }
-    .memberships-carousel {
-        grid-area: memberships-carousel;
-        justify-self: center;
-        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .memberships-previous {
-        grid-area: memberships-previous;
-        justify-self: center;
-        align-self: center;
+        display: none;
     }
     .memberships-next {
-        grid-area: memberships-next;
-        justify-self: center;
-        align-self: center;
+        display: none;
     }
 }
 
 @media (max-width: 460px) {
+
     .memberships-header {
         flex-direction: column;
         align-items: flex-start;
@@ -111,3 +111,5 @@
         margin-bottom: 30px;
     }
 }
+
+

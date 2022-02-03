@@ -136,3 +136,16 @@
         width: 230px;
     }
 }
+
+
+@media (max-width: 460px) {
+    .Membership {
+        width: 95%;
+    }
+}
+
+@media (max-width:320px) {
+    .membership-body {
+        padding: 0;
+    }
+}

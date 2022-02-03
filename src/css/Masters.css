@@ -115,6 +115,10 @@
     justify-content: flex-start;
 }
 
+.Masters .rec-slider-container {
+        margin: 0px;
+    }
+
 @media (max-width: 1024px) {
     .master-decoration-right {
         position: absolute;
@@ -130,7 +134,7 @@
 
     .masters-container {
         flex-direction: column;
-    padding-bottom: 0px;
+    padding-bottom: 60px;
 
     }
 
@@ -150,13 +154,15 @@
         width: 100%;
         height: auto;
         margin-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1.5fr 0.5fr;
+        /* display: grid;
+        grid-template-columns: 0.1fr 1.8fr 0.1fr;
+        grid-template-rows: 1fr;
         gap: 20px 0px;
-        grid-template-areas:
-            "masters-carousel masters-carousel"
-            "masters-previous masters-next";
+        grid-template-areas: "masters-previous masters-carousel masters-next"; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .masters-carousel {
         grid-area: masters-carousel;
@@ -164,14 +170,22 @@
         align-self: center;
     }
     .masters-previous {
-        grid-area: masters-previous;
+        /* grid-area: masters-previous;
         justify-self: center;
-        align-self: center;
+        align-self: center; */
+        /* position: absolute; */
+        left: 0;
+        z-index: 100;
+        font-size: 56px;
+        color: var(--primary-blue);
     }
     .masters-next {
-        grid-area: masters-next;
+        /* grid-area: masters-next;
         justify-self: center;
-        align-self: center;
+        align-self: center; */
+        /* position: absolute; */
+        right: 0;
+        z-index: 100;
     }
 
     .master-decoration-right {
@@ -180,6 +194,8 @@
 }
 
 @media (max-width: 460px) {
+
+
     .master-decoration-right {
         display: none;
     }
