@@ -40,7 +40,8 @@ const Navbar = () => {
     const [top, setTop] = useState("-100%");
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
-    const countdownTimestampMs = 1644696000000;
+    // const countdownTimestampMs = 1644696000000;
+    const countdownTimestampMs = "Sat, 19 Mar 2022 16:00:00 GMT-5";
 
     useEffect(() => {
         if (menu) {

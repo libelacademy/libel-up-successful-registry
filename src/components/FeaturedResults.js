@@ -14,9 +14,9 @@ import Carousel, { consts } from "react-elastic-carousel";
 const FeaturedResults = () => {
     const carousel = useRef(null);
 
-    const featuredList = features.map((feature, index) => (
+    const featuredList = features.map((feature, i) => (
         <Feature
-            key={index}
+            key={feature.id}
             image={feature.image}
             name={feature.name}
             title={feature.title}
@@ -25,7 +25,7 @@ const FeaturedResults = () => {
         />
     ));
 
-    featuredList.push(<SeeMoreFeatures />);
+    featuredList.push(<SeeMoreFeatures key={"16"}/>);
 
     const customArrows = ({ type, onClick, isEdge }) => {
         const pointer =

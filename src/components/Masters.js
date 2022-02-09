@@ -122,21 +122,6 @@ const Masters = () => {
                     >
                         {masterList}
                     </Carousel>
-                    {/* <IoChevronBack
-                        className="masters-previous"
-                        onClick={() => {
-                            carousel.current.slidePrev();
-                        }}
-                    />
-
-                    <button
-                        className="nav-buttons masters-next"
-                        onClick={() => {
-                            carousel.current.slideNext();
-                        }}
-                    >
-                        <IoChevronForward />
-                    </button> */}
                 </div>
             </div>
         </div>

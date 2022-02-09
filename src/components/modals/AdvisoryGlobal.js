@@ -10,13 +10,11 @@ const AdvisoryGlobal = () => {
 
     const modal = useSelector(state => state.advisory.value.modal)
 
-    const mobile = window.visualViewport.width
-
-    return (
+        return (
         <div
             className="AdvisoryGlobal"
             style={
-                modal && mobile > 860
+                modal
                     ? { opacity: 1, visibility: "visible" }
                     : {
                           opacity: 0,
@@ -31,9 +29,9 @@ const AdvisoryGlobal = () => {
                     dispatch(closeAdvisory());
                 }}
             />
-            <h1>¿Necesitas una asesoría?</h1>
+            <h1>Únete a nuestras charlas informativas</h1>
             <a
-                href="https://calendly.com/libel"
+                href="https://calendly.com/libel/asesoria-general"
                 target={"_blank"}
                 rel="noreferrer"
             >

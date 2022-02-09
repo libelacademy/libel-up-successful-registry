@@ -2,7 +2,6 @@
     width: 100%;
     height: 450px;
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     background-color: var(--base-1);
@@ -15,23 +14,25 @@
     position: relative;
     align-items: center;
     justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.decoration-left {
+.counseling-decoration-left {
     position: absolute;
     bottom: 0;
-    left: -25%;
+    left: -30%;
 }
 
-.decoration-right {
+.counseling-decoration-right {
     position: absolute;
     bottom: 0;
-    right: -25%;
+    right: -30%;
 }
 
 .Counseling h1 {
     /* max-width: 500px; */
-    font-size: 48px;
+    font-size: 68px;
     text-align: left;
     line-height: 1.09;
 }
@@ -101,34 +102,38 @@
     );
 }
 
-@media (max-width: 1280pc) {
-    .decoration-left {
-        left: -35%;
+@media (max-width: 1280px) {
+    .counseling-decoration-left {
+        left: -37%;
     }
 
-    .decoration-right {
-        right: -35%;
+    .counseling-decoration-right {
+        right: -37%;
     }
 }
 
 @media (max-width: 1024px) {
-    .decoration-left {
+    .Counseling h1 {
+    /* max-width: 500px; */
+    font-size: 58px;
+    }
+    .counseling-decoration-left {
         left: -45%;
         bottom: -20%;
     }
 
-    .decoration-right {
+    .counseling-decoration-right {
         
         right: -48%;
     }
 }
 
 @media (max-width: 860px) {
-    .decoration-left {
+    .counseling-decoration-left {
         display: none;
     }
 
-    .decoration-right {
+    .counseling-decoration-right {
         display: none;
     }
 }
@@ -136,13 +141,6 @@
 @media (max-width: 460px) {
     .Counseling {
         height: 550px;
-    }
-    .decoration-left {
-        display: none;
-    }
-
-    .decoration-right {
-        display: none;
     }
 
     .counseling-container {
@@ -152,8 +150,8 @@
     }
 
     .Counseling h1 {
+        font-size: 48px;
         text-align: center;
-        line-height: 48px;
         margin-bottom: 30px;
     }
 
@@ -163,5 +161,13 @@
 
     .counseling-content p {
         text-align: center;
+    }
+}
+
+@media (max-width:320px) {
+        .Counseling h1 {
+        font-size: 42px;
+        text-align: center;
+        margin-bottom: 30px;
     }
 }

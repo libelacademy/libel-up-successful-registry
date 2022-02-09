@@ -9,10 +9,18 @@ import { Link } from "react-scroll";
 
 import Carousel, { consts } from "react-elastic-carousel";
 
+import Image from "react-image-webp"
+
 import headerBanner1 from "../images/header-banner-1.png";
+import headerBannerWebp1 from "../images/header-banner-1.webp";
+
 import headerBanner2 from "../images/header-banner-2.png";
+import headerBannerWebp2 from "../images/header-banner-2.webp";
+
 
 import decorationLeft from "../images/decorations/04.png";
+import decorationLeftWebp from "../images/decorations/04.webp";
+
 import PreviousButton from "./buttons/PreviousButton";
 import NextButton from "./buttons/NextButton";
 
@@ -20,8 +28,24 @@ const Header = () => {
     const [banner, setBanner] = useState(0);
 
     const banners = [
-        <img src={headerBanner1} alt="Header Banner 1" />,
-        <img src={headerBanner2} alt="Header Banner 2" />,
+        <Image
+            key={"banner1"}
+            webp={headerBannerWebp1}
+            src={headerBanner1}
+            alt="Header Banner 1"
+            className={
+                banner === 0 ? "heder-image-active" : "header-image-desactive"
+            }
+        />,
+        <Image
+            key={"banner2"}
+            webp={headerBannerWebp2}
+            src={headerBanner2}
+            alt="Header Banner 2"
+            className={
+                banner === 1 ? "heder-image-active" : "header-image-desactive"
+            }
+        />,
     ];
 
     const nextBanner = () => {
@@ -34,21 +58,25 @@ const Header = () => {
 
     const tagsList = [
         <Tags
+            key={0}
             tag={"LICENCIA ZBRUSH"}
             url="https://libel.academy/zbrush/"
             width={215}
         />,
         <Tags
+            key={1}
             tag={"ESCUELA BLENDER"}
             url="https://aprende-blender.libel.academy/"
             width={215}
         />,
         <Tags
+            key={2}
             tag={"ESCUELA ZBRUSH"}
             url="https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush"
             width={215}
         />,
         <Tags
+            key={3}
             tag={"3D CAMP"}
             url="https://libel.academy/3d-camp/"
             width={150}
@@ -76,11 +104,7 @@ const Header = () => {
     return (
         <div className="Header">
             <div className="header-container container padding">
-                <img
-                    src={decorationLeft}
-                    className="header-decoration"
-                    alt="Header Decoration"
-                />
+                <Image className="header-decoration" webp={decorationLeftWebp} src={decorationLeft} alt="Decoration Header"/>
                 <div className="header-content">
                     <div className="header-slider-control">
                         <IoArrowBack
@@ -156,7 +180,7 @@ const Header = () => {
                         nextBanner();
                     }}
                 >
-                    {banners[banner]}
+                    {banners}
                 </div>
             </div>
             <div className="headers-tags">

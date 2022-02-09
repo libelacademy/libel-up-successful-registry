@@ -11,10 +11,11 @@ const Counseling = () => {
                 <img
                     src={decorationLeft}
                     alt="Decoration Left"
-                    className="decoration-left"
+                    className="counseling-decoration-left"
                 />
                 <h1>
-                    Asiste a una <span>asesoría</span><br/> grupal gratuita
+                    Asiste a una <span>asesoría</span>
+                    <br /> grupal gratuita
                     <span>.</span>
                 </h1>
                 <div className="counseling-content">
@@ -39,7 +40,7 @@ const Counseling = () => {
                 <img
                     src={decorationRight}
                     alt="Decoration Right"
-                    className="decoration-right"
+                    className="counseling-decoration-right"
                 />
             </div>
         </div>

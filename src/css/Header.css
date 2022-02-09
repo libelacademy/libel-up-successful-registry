@@ -1,6 +1,6 @@
 .Header {
     width: 100%;
-    height: 820px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,21 +216,24 @@
 }
 
 .header-image img {
+    height: 90%;
     position: absolute;
     bottom: 0;
     left: 0;
+    transition: 0.8s all ease-in;
+}
+
+.header-image-active {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+}
+
+.header-image-desactive {
+    opacity: 0;
+    transform: scale(0.8) translateX(100%);
 }
 
 @media (max-width: 1440px) {
-    .header-decoration {
-        position: absolute;
-        left: -23%;
-        bottom: -20%;
-        z-index: 100;
-    }
-}
-
-@media (max-width: 1280px) {
     .header-decoration {
         position: absolute;
         left: -30%;
@@ -239,16 +242,15 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .header-decoration {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .Header {
         height: 850px;
-    }
-    .header-decoration {
-        /* position: absolute;
-    left: -30%;
-    bottom: -20%;
-    z-index: 100; */
-        display: none;
     }
 
     .header-content {
@@ -301,6 +303,7 @@
 
     .header-image img {
         width: 150%;
+        height: auto;
         left: 0;
     }
 

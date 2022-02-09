@@ -15,7 +15,6 @@
     padding: 10px 0px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
 }
 
 .ag-closer {
@@ -36,11 +35,12 @@
 }
 
 .AdvisoryGlobal h1 {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .AdvisoryGlobal a {
-    width: 230px;
+    width: 200px;
     height: 36px;
     border-radius: 18px;
     border: 2px solid var(--cyan);
@@ -60,3 +60,35 @@
     transform: scale(1.05);
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+@media (max-width:460px) {
+    .AdvisoryGlobal {
+        width: 90%;
+    right: calc(50% - 45%);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .AdvisoryGlobal h1 { 
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width:320px) {
+    .AdvisoryGlobal {
+        width: 90%;
+    right: calc(50% - 45%);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .AdvisoryGlobal h1 { 
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+
+

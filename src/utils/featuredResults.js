@@ -17,6 +17,7 @@ import allanMoralesZBrush from "../images/results/alan_morales_zbrush.jpg";
 
 const features = [
     {
+        id: 0,
         image: nicolasZBrush,
         name: "Nicolas",
         course: "Reto ZBrush",
@@ -24,6 +25,8 @@ const features = [
         video: "https://youtu.be/L_49m_pSwE8",
     },
     {
+        id: 1,
+
         image: joseEmanuel3DCamp,
         name: "Jose Emanuel",
         course: "3D Camp",
@@ -31,6 +34,8 @@ const features = [
         video: "https://youtu.be/d93KEZs8Ewg",
     },
     {
+        id: 2,
+
         image: joseManuelBlender,
         name: "Jose Manuel",
         course: "Blender - ZBrush - Substance",
@@ -38,6 +43,8 @@ const features = [
         video: "https://youtu.be/flEz66qXrcs",
     },
     {
+        id: 3,
+
         image: alessioRossiBlender,
         name: "Alessio Rossi",
         course: "Blender",
@@ -46,6 +53,8 @@ const features = [
     },
 
     {
+        id: 4,
+
         image: miguelPachecoBlender,
         name: "Miguel Pacheco",
         course: "Blender",
@@ -53,6 +62,8 @@ const features = [
         video: "https://youtu.be/Qv9FGcObJgs",
     },
     {
+        id: 5,
+
         image: deissyCastilloBlender,
         name: "Deissy Castillo",
         course: "Blender",
@@ -60,14 +71,16 @@ const features = [
         video: "https://youtu.be/Eivej6HMYG8",
     },
     {
+        id: 6,
+
         image: juanDadomoZBrush,
         name: "Juan Dadomo",
         course: "ZBrush",
         title: "Cyberpunk",
         video: "https://youtu.be/ZfEeKuHlnSA",
     },
-
     {
+        id: 7,
         image: matiasMiloroZBrush,
         name: "Matias Miloro",
         course: "ZBrush",
@@ -76,6 +89,7 @@ const features = [
     },
 
     {
+        id: 8,
         image: reto3DZBrush,
         name: "Nicolás González",
         course: "Curso - Reto 3D",
@@ -83,6 +97,7 @@ const features = [
         video: "https://youtu.be/ReG_nOPJZos",
     },
     {
+        id: 9,
         image: jorgeBenitezBlender,
         name: "Jorge Benítez",
         course: "Master en Blender",
@@ -91,6 +106,7 @@ const features = [
     },
 
     {
+        id: 10,
         image: nicolasGonzalesPersonajesAAA,
         name: "Nicolás González",
         course: "Personajes AAA - ZBrush",
@@ -98,6 +114,7 @@ const features = [
         video: "https://youtu.be/483JjPo2mq0",
     },
     {
+        id: 11,
         image: danielaCortezBlender,
         name: "Daniela Cortés",
         course: "Blender",
@@ -106,6 +123,7 @@ const features = [
     },
 
     {
+        id: 12,
         image: bairnCastilloReto3D,
         name: "Bairon Castillo",
         course: "Curso - Reto 3D",
@@ -113,6 +131,7 @@ const features = [
         video: "https://youtu.be/XdBDgbNByVo",
     },
     {
+        id: 13,
         image: carlosAcevedo3dCamp,
         name: "Carlos Acevedo",
         course: "3D Camp",
@@ -121,6 +140,7 @@ const features = [
     },
 
     {
+        id: 14,
         image: nicolasUrbanoZBrush,
         name: "Nicolás Urbano",
         course: "ZBrush",
@@ -128,6 +148,7 @@ const features = [
         video: "https://youtu.be/UbWX_cMZolM",
     },
     {
+        id: 15,
         image: allanMoralesZBrush,
         name: "Alan Morales",
         course: "ZBrush",
