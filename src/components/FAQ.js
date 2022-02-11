@@ -19,7 +19,7 @@ const FAQ = () => {
     }
 
     return (
-        <div className="FAQ">
+        <section className="FAQ" id="faq">
             <div className="faq-container container">
                 <div className="faq-title">
                     <h1>
@@ -90,7 +90,7 @@ const FAQ = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

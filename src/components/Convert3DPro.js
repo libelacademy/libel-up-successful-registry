@@ -24,7 +24,7 @@ const Convert3DPro = () => {
     ];
 
      return (
-        <div className="Convert3DPro">
+        <section className="Convert3DPro">
             <div className="convert-container container padding">
                 <div className="convert-header">
                     <h1>
@@ -72,7 +72,7 @@ const Convert3DPro = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

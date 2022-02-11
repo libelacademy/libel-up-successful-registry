@@ -24,7 +24,7 @@ const Financing = () => {
     ];
 
     return (
-        <div className="Financing">
+        <section className="Financing" id="financing">
             <div className="financing-container container padding">
                 <div className="financing-header">
                     <h1 className="financing-title">
@@ -96,7 +96,7 @@ const Financing = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

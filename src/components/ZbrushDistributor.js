@@ -7,7 +7,7 @@ import decration from "../images/decorations/03.png"
 
 const ZbrushDistributor = () => {
     return (
-        <div className="ZbrushDistributor">
+        <section className="ZbrushDistributor">
             <div className="distributor-container container padding">
                 <div className="distributor-text">
                     <p>
@@ -32,7 +32,7 @@ const ZbrushDistributor = () => {
                 </div>
                 <img src={decration} alt="ZBrush Distributor" className="distributor-decoration"/>
             </div>
-        </div>
+        </section>
     );
 };
 

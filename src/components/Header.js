@@ -5,8 +5,6 @@ import Tags from "./buttons/Tags";
 import line from "../images/line.png";
 import { IoArrowBack, IoArrowForward, IoChevronForward } from "react-icons/io5";
 
-import { Link } from "react-scroll";
-
 import Carousel, { consts } from "react-elastic-carousel";
 
 import Image from "react-image-webp"
@@ -99,12 +97,25 @@ const Header = () => {
         )
     }
 
-
+    const handleLink = (e) => {
+        e.preventDefault();
+        const target = e.target.getAttribute("href");
+        const location = document.querySelector(target).offsetTop;
+        window.scrollTo({
+            left: 0,
+            top: location - 80,
+        });
+    };
         
     return (
-        <div className="Header">
+        <section className="Header" id="home">
             <div className="header-container container padding">
-                <Image className="header-decoration" webp={decorationLeftWebp} src={decorationLeft} alt="Decoration Header"/>
+                <Image
+                    className="header-decoration"
+                    webp={decorationLeftWebp}
+                    src={decorationLeft}
+                    alt="Decoration Header"
+                />
                 <div className="header-content">
                     <div className="header-slider-control">
                         <IoArrowBack
@@ -159,20 +170,16 @@ const Header = () => {
                         Aprende a tu ritmo o con clases en vivo y logra{" "}
                         <span>resultados increíbles.</span>
                     </p>
-                    <Link
-                        to="results"
-                        hashSpy={true}
-                        spy={true}
-                        smooth={true}
-                        duration={700}
-                        offset={-80}
+                    <a
+                        href="#results"
                         className="see-results"
+                        onClick={handleLink}
                     >
                         VER RESULTADOS
                         <span className="see-results-circle">
                             <IoChevronForward />
                         </span>
-                    </Link>
+                    </a>
                 </div>
                 <div
                     className="header-image"
@@ -185,14 +192,16 @@ const Header = () => {
             </div>
             <div className="headers-tags">
                 <div className="header-tags-container container padding">
-
-                    <Carousel breakPoints={breakPoints} pagination={false} renderArrow={customArrows}>
+                    <Carousel
+                        breakPoints={breakPoints}
+                        pagination={false}
+                        renderArrow={customArrows}
+                    >
                         {tagsList}
                     </Carousel>
-                    
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -1,6 +1,6 @@
 .AdvisoryGlobal {
     position: fixed;
-    z-index: 10000;
+    z-index: 1000;
     bottom: 0;
     right: calc(50% - 350px);
     width: 700px;

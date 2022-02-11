@@ -16,7 +16,7 @@ const Courses = () => {
     const filtered = courses.filter((course) => course.tag === filter);
 
     return (
-        <div className="Courses">
+        <section className="Courses" id="courses">
             <div className="courses-container container padding">
                 <div className="courses-header">
                     <div className="courses-title">
@@ -136,7 +136,7 @@ const Courses = () => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

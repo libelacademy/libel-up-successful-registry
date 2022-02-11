@@ -10,12 +10,14 @@ import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import videoReducer from "./features/video";
 import advisoryReducer from "./features/advisory";
+import sideMenuReducer from "./features/menu";
 
 
 const store = configureStore({
     reducer: {
         video: videoReducer,
         advisory: advisoryReducer,
+        sideMenu: sideMenuReducer,
     },
 });
 

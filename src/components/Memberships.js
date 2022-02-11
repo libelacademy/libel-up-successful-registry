@@ -55,7 +55,7 @@ const Memberships = () => {
     ];
 
     return (
-        <div className="Memberships">
+        <section className="Memberships" id="memberships">
             <div className="memberships-container container padding">
                 <div className="memberships-header">
                     <div className="memberships-title">
@@ -99,7 +99,7 @@ const Memberships = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

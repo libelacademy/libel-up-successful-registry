@@ -43,7 +43,7 @@ const Benefits = () => {
         };
 
     return (
-        <div className="Benefits">
+        <section className="Benefits" id="benefits">
             <div className="benefits-container container padding">
                 <h1 className="benefits-title">
                     <span>BENEFICIOS</span>
@@ -175,7 +175,7 @@ const Benefits = () => {
                     className="benefits-decoration"
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

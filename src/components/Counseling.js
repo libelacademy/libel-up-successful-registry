@@ -6,7 +6,7 @@ import decorationRight from "../images/decorations/counseling_decoration_2.png";
 
 const Counseling = () => {
     return (
-        <div className="Counseling">
+        <section className="Counseling">
             <div className="counseling-container container padding">
                 <img
                     src={decorationLeft}
@@ -43,7 +43,7 @@ const Counseling = () => {
                     className="counseling-decoration-right"
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

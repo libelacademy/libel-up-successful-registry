@@ -55,7 +55,7 @@ const Masters = () => {
     ];
 
     return (
-        <div className="Masters">
+        <section className="Masters" id="masters">
             <div className="masters-container container padding">
                 <img
                     src={decorationRight}
@@ -124,7 +124,7 @@ const Masters = () => {
                     </Carousel>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
