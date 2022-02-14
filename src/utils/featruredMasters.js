@@ -1,7 +1,7 @@
-import masterImage1 from "../images/master_blender.jpg"
-import masterImage2 from "../images/master_escultura.jpg"
-import masterImage3 from "../images/master_rigging.jpg"
-import masterImage4 from "../images/master_zbrush.jpg"
+import masterImage1 from "../images/blender_videojuegos.jpeg";
+import masterImage2 from "../images/escultura_impresion.jpeg";
+import masterImage3 from "../images/rigging.jpeg"
+import masterImage4 from "../images/zbrush.jpeg"
 
 import Blender from "../images/professional3d/Imagen 7.png"
 import ZBrush from "../images/professional3d/Imagen 1.png"
@@ -14,14 +14,14 @@ const masters = [
         professor: "Ricardo Díaz",
         technology: Blender,
         url: "https://www.youtube.com/watch?v=qxU8WhJZlb0",
-        master: "https://libel.academy/libel/master-en-blender/",
+        master: "https://libel.academy/master-blender/",
     },
     {
         image: masterImage2,
         title: "Máster en Escultura para Impresión 3D",
         professor: "Oscar Fernández ",
         technology: ZBrush,
-        url: "https://www.youtube.com/watch?v=QxBoSd1ckqc",
+        url: "https://www.youtube.com/watch?v=8Gp-xi3XMjc",
         master: "https://libel.academy/libel/master-escultura-para-impresion-3d/",
     },
     {
@@ -30,7 +30,7 @@ const masters = [
         professor: "Fernando Saltos",
         technology: Maya,
         url: "https://www.youtube.com/watch?v=chJJRqvsQWE",
-        master: "https://libel.academy/libel/rigging-para-videojuegos/",
+        master: "https://libel.academy/master-rigging/",
     },
     {
         image: masterImage4,

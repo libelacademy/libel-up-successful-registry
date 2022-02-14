@@ -521,7 +521,7 @@ const Navbar = () => {
                                             alt="bullet point"
                                         />
                                     </div>
-                                    <a href="https://libel.academy/libel/master/">
+                                    <a href="https://libel.academy/master/">
                                         Masters
                                     </a>
                                 </li>
