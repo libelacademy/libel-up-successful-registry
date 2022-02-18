@@ -330,9 +330,9 @@
 }
 
 @media (max-width:320px) {
-        .Header {
+        /* .Header {
         height: 1000px;
-    }
+    } */
         .headers-tags .Tags {
         font-size: 10px;
     }

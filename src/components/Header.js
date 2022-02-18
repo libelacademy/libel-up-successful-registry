@@ -7,14 +7,13 @@ import { IoArrowBack, IoArrowForward, IoChevronForward } from "react-icons/io5";
 
 import Carousel, { consts } from "react-elastic-carousel";
 
-import Image from "react-image-webp"
+import Image from "react-image-webp";
 
 import headerBanner1 from "../images/header-banner-1.png";
 import headerBannerWebp1 from "../images/header-banner-1.webp";
 
 import headerBanner2 from "../images/header-banner-2.png";
 import headerBannerWebp2 from "../images/header-banner-2.webp";
-
 
 import decorationLeft from "../images/decorations/04.png";
 import decorationLeftWebp from "../images/decorations/04.webp";
@@ -26,9 +25,17 @@ import { useSelector } from "react-redux";
 const Header = () => {
     const [banner, setBanner] = useState(0);
     const bannerTop = useSelector((state) => state.banner.value.banner);
-    
-    const paddingTop = bannerTop ? { paddingTop: 80 } : { paddingTop: 80 };
+    const mobile = window.innerWidth <= 460;
 
+    const paddingTop = bannerTop ? { paddingTop: 200 } : { paddingTop: 80 };
+    let mobileHeight = null;
+
+    if (mobile) {
+        mobileHeight = bannerTop ? { height: 1170 } : { height: 1050 };
+    }
+
+    const style = { ...paddingTop, ...mobileHeight }
+    
     const banners = [
         <Image
             key={"banner1"}
@@ -92,14 +99,15 @@ const Header = () => {
         { width: 1200, itemsToShow: 4, showArrows: false },
     ];
 
-    const customArrows = ({ type, onClick, isEdge })=> {
-        const pointer = type === consts.PREV ? <PreviousButton/> : <NextButton/>
+    const customArrows = ({ type, onClick, isEdge }) => {
+        const pointer =
+            type === consts.PREV ? <PreviousButton /> : <NextButton />;
         return (
             <div onClick={onClick} disabled={isEdge}>
                 {pointer}
             </div>
-        )
-    }
+        );
+    };
 
     const handleLink = (e) => {
         e.preventDefault();
@@ -111,10 +119,8 @@ const Header = () => {
         });
     };
 
-    
-        
     return (
-        <section className="Header" id="home" style={paddingTop}>
+        <section className="Header" id="home" style={style}>
             <div className="header-container container padding">
                 <Image
                     className="header-decoration"
