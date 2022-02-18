@@ -20,7 +20,7 @@ const Counseling = () => {
                 </h1>
                 <div className="counseling-content">
                     <a
-                        href="https://calendly.com/libel"
+                        href="https://libel.academy/asesoria"
                         target={"_blank"}
                         rel="noreferrer"
                         className="agenda"

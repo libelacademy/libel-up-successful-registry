@@ -21,9 +21,13 @@ import decorationLeftWebp from "../images/decorations/04.webp";
 
 import PreviousButton from "./buttons/PreviousButton";
 import NextButton from "./buttons/NextButton";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     const [banner, setBanner] = useState(0);
+    const bannerTop = useSelector((state) => state.banner.value.banner);
+    
+    const paddingTop = bannerTop ? { paddingTop: 80 } : { paddingTop: 80 };
 
     const banners = [
         <Image
@@ -106,9 +110,11 @@ const Header = () => {
             top: location - 80,
         });
     };
+
+    
         
     return (
-        <section className="Header" id="home">
+        <section className="Header" id="home" style={paddingTop}>
             <div className="header-container container padding">
                 <Image
                     className="header-decoration"

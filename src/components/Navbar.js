@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../css/Navbar.css";
 
+import BannerTop from "./BannerTop"
+
 import {
     IoArrowBack,
     IoCaretDown,
@@ -183,6 +185,7 @@ const Navbar = () => {
 
     return (
         <nav className="Navbar">
+            <BannerTop />
             <div className="navbar-container container">
                 <div className="home">
                     <a className="logo" href="https://libel.academy">

@@ -22,7 +22,7 @@ const masters = [
         professor: "Oscar Fernández ",
         technology: ZBrush,
         url: "https://www.youtube.com/watch?v=8Gp-xi3XMjc",
-        master: "https://libel.academy/libel/master-escultura-para-impresion-3d/",
+        master: "https://libel.academy/master-escultura-para-impresion/",
     },
     {
         image: masterImage3,
