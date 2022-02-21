@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { closeBanner } from "../features/banner";
 
+import libelIcon from "../images/logo_dot.png"
 
 const BannerTop = () => {
 
@@ -34,8 +35,9 @@ const BannerTop = () => {
             />
             <div className="banner-container container">
                 <div className="banner-information">
+                    <img src={libelIcon} alt="Libel Academy"/>
                     <h1>Aprende Blender en 15 días</h1>
-                    <p>No necesitas conocimientos previos</p>
+                    <p>"No necesitas conocimientos previos"</p>
                 </div>
                 <a
                     href="https://libel.academy/curso-blender"
