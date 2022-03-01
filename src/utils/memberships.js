@@ -21,7 +21,7 @@ const memberships = [
         image: membershipImage2,
         icon: membershipIcon1,
         name: "Recargada",
-        price: "39.00",
+        price: "149.00",
         courses: 41,
         url: "https://cursos.libel.academy/bundles/membresia-recargada",
     },
@@ -29,7 +29,7 @@ const memberships = [
         image: membershipImage3,
         icon: membershipIcon2,
         name: "Black",
-        price: "29.00",
+        price: "119.00",
         courses: 23,
         url: "https://cursos.libel.academy/bundles/membresia-black",
     },
@@ -39,7 +39,7 @@ const memberships = [
         name: "Intermedio",
         price: "49.00",
         courses: 9,
-        url: "https://cursos.libel.academy/bundles/plan-nivel-intermedio-blender",
+        url: "https://libel.academy/escuela-domina-blender",
     },
 ];
 

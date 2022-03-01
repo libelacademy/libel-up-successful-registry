@@ -4,7 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Video from "./components/modals/Video";
-import AdvisoryGlobal from "./components/modals/AdvisoryGlobal";
+import Whatsapp from "./components/modals/Whatsapp";
+import InformativeTalks from "./components/modals/InformativeTalks";
+
 
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
@@ -27,7 +29,8 @@ ReactDOM.render(
         <Provider store={store}>
             <App />
             <Video />
-            <AdvisoryGlobal />
+            <InformativeTalks />
+            <Whatsapp />
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")

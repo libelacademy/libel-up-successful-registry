@@ -52,7 +52,7 @@ const coursesDetail = {
         {
             id: 2,
             name: "Curso de Blender",
-            url: "https://aprende-blender.libel.academy/",
+            url: "https://libel.academy/escuela-domina-blender",
         },
         {
             id: 3,
@@ -109,7 +109,7 @@ const schoolsDetails = {
         {
             id: 1,
             name: "Escuela Blender",
-            url: "https://aprende-blender.libel.academy/",
+            url: "https://libel.academy/escuela-domina-blender",
         },
         {
             id: 2,
@@ -475,7 +475,7 @@ const Navbar = () => {
                                         />
                                     </div>
                                     <a
-                                        href="https://aprende-blender.libel.academy/"
+                                        href="https://libel.academy/escuela-domina-blender"
                                         target={"_blank"}
                                         rel="noreferrer"
                                     >

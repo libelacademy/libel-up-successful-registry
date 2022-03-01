@@ -45,7 +45,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://aprende-blender.libel.academy/">
+                                <a href="https://libel.academy/escuela-domina-blender">
                                     Escuela Blender
                                 </a>
                             </li>

@@ -41,9 +41,10 @@
 }
 
 .course-information-title h4 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 500;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .Course:hover h4 {

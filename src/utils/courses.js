@@ -8,6 +8,8 @@ import image7 from "../images/courses/Image7.png";
 import image8 from "../images/courses/Image8.jpeg";
 import image9 from "../images/courses/Image9.png"
 
+import image10 from "../images/masters/rigging.jpeg"
+
 import avatar1 from "../images/courses/Avatars1.png";
 import avatar2 from "../images/courses/Avatars2.png";
 import avatar3 from "../images/courses/Avatars3.png";
@@ -125,26 +127,26 @@ const courses = [
     },
     // MASTERS ##############################################################################
     {
-        title: " Aprende RIG en maya",
-        price: "39.00",
-        info: "Es tu gran oportunidad de aprender Rigging y hacer tu primera animación.",
-        image: image9,
+        title: "Máster en Rigging para Videojuegos y Animación",
+        price: "399.00",
+        info: "Vamos paso a paso y  crea Rig para animación y videojuegos desde cero.",
+        image: image10,
         avatar: avatar1,
         software: maya,
         start: false,
-        url: "https://cursos.libel.academy/courses/rigging-de-personajes-para-animacion-3d-camp",
+        url: "https://libel.academy/master-rigging",
         video: "https://www.youtube.com/watch?v=3E2ul4jfTPo&t=17s",
         tag: "master",
     },
     {
-        title: "Salamandra en ZBRUSH",
+        title: "Máster en Escultura para Impresión 3D",
         price: "39.9",
-        info: "Aprende paso a paso y crea personajes para concept en ZBRUSH.",
+        info: "Crea personajes en ZBrush y déjalos listos para el proceso de impresión 3D.",
         image: image8,
         avatar: avatar2,
         software: zbrush,
         start: false,
-        url: "https://cursos.libel.academy/courses/personajes-en-zbrush-3d-camp",
+        url: "https://libel.academy/mastes-escultura-",
         video: "https://www.youtube.com/watch?v=-q3P4ZM7b0I&t=24s",
         tag: "master",
     },
