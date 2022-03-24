@@ -57,7 +57,7 @@ const courses = [
   },
   {
     title: 'Soldado de Elite',
-    price: '49.00',
+    price: '249.00',
     info: 'Descubre las últimas técnicas de la industria y crea personajes realistas para videojuegos AAA.',
     image: image3,
     avatar: avatar3,
