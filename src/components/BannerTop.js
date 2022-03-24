@@ -36,15 +36,15 @@ const BannerTop = () => {
             <div className="banner-container container">
                 <div className="banner-information">
                     <img src={libelIcon} alt="Libel Academy"/>
-                    <h1>Aprende Blender en 15 días</h1>
-                    <p>"No necesitas conocimientos previos"</p>
+                    <h1>Estamos cumpliendo 7 años</h1>
+                    <p>"Ofertas hasta del 70% DTO"</p>
                 </div>
                 <a
-                    href="https://libel.academy/curso-blender"
+                    href="https://libel.academy/aniversario"
                     target={"_blank"}
                     rel="noreferrer"
                 >
-                    ÚNETE AHORA
+                    VER OFERTAS
                 </a>
             </div>
         </div>

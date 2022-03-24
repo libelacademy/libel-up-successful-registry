@@ -82,9 +82,24 @@ const links = [
 const FloatingSidebar = () => {
 
     const sideMenu = useSelector((state) => state.sideMenu.value.menu);
+    const bannerTop = useSelector((state) => state.banner.value.banner);
 
     const [expanded, setExpanded] = useState(true);
     const [appear, setAppear] = useState({ opacity: 0 });
+    const [top, setTop] = useState(null)
+    
+
+    const showMenu = sideMenu
+    ? {
+          transform: "translateX(-200%)",
+          visibility: "hidden",
+          opacity: 0,
+      }
+    : {
+          transform: "translateX(0)",
+          visibility: "visible",
+          opacity: 1,
+      }
 
     const handleLink = (e) => {
         e.preventDefault();
@@ -106,24 +121,21 @@ const FloatingSidebar = () => {
         }
     }, [expanded]);
 
+    useEffect(() => {
+      if(!expanded) {
+        setTop(bannerTop ? {top: 150}: {top: 90})
+      } else {
+          setTop({top: 'calc(50% - 100px)'})
+      }
+    }, [bannerTop, expanded])
+    
+
     return (
         <div
             className={
                 expanded ? "FloatingSidebar expanded" : "FloatingSidebar"
             }
-            style={
-                sideMenu
-                    ? {
-                          transform: "translateX(-200%)",
-                          visibility: "hidden",
-                          opacity: 0,
-                      }
-                    : {
-                          transform: "translateX(0)",
-                          visibility: "visible",
-                          opacity: 1,
-                      }
-            }
+            style={{...showMenu, ...top} }
         >
             <div
                 className={

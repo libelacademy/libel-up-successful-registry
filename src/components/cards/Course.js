@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../css/cards/Course.css";
 
 import { IoCaretForwardOutline } from "react-icons/io5";
@@ -6,10 +6,32 @@ import { useDispatch } from "react-redux";
 
 import { openVideo } from "../../features/video";
 
+import { getRemainingTimeUntilMsTimestamp } from "../../utils/countdown";
+
+const defaultRemainingTime = {
+    seconds: "00",
+    minutes: "00",
+    hours: "00",
+    days: "00",
+};
+
+
 const Course = ({image, avatar, software, title, price, info, start, url, video }) => {
 
     const dispatch = useDispatch();
+    const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            updateRemainingTime(start);
+        }, 1000);
+        return () => clearInterval(intervalId);
+    }, [start]);
+
+    function updateRemainingTime(countdown) {
+        setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
+    }
 
     return (
         <div className="Course">
@@ -52,19 +74,19 @@ const Course = ({image, avatar, software, title, price, info, start, url, video 
                             <h5>EMPIEZA EN</h5>
                             <div className="course-date">
                                 <div className="segment">
-                                    <div className="numbers">5</div>
+                                    <div className="numbers">{remainingTime.days}</div>
                                     <div className="letters">DÍAS</div>
                                 </div>
                                 <div className="segment">
-                                    <div className="numbers">15</div>
+                                    <div className="numbers">{remainingTime.hours}</div>
                                     <div className="letters">HOR</div>
                                 </div>
                                 <div className="segment">
-                                    <div className="numbers">22</div>
+                                    <div className="numbers">{remainingTime.minutes}</div>
                                     <div className="letters">MIN</div>
                                 </div>
                                 <div className="segment">
-                                    <div className="numbers">45</div>
+                                    <div className="numbers">{remainingTime.seconds}</div>
                                     <div className="letters">SEG</div>
                                 </div>
                             </div>

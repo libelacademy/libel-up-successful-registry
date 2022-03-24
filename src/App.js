@@ -12,7 +12,6 @@ import Header from './components/Header';
 import Masters from './components/Masters';
 import Memberships from './components/Memberships';
 import Navbar from './components/Navbar';
-import ZbrushDistributor from './components/ZbrushDistributor';
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
       <Counseling />
       <FeaturedResults />
       <Benefits />
-      <ZbrushDistributor />
       <Financing />
       <FAQ />
       <Footer />

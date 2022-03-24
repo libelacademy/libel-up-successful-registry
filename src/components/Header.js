@@ -27,12 +27,15 @@ const Header = () => {
     const bannerTop = useSelector((state) => state.banner.value.banner);
     const mobile = window.innerWidth <= 460;
 
-    const paddingTop = bannerTop ? { paddingTop: 200 } : { paddingTop: 80 };
+    const paddingTop = bannerTop ? { paddingTop: 140 } : { paddingTop: 80 };
     let mobileHeight = null;
 
     if (mobile) {
         mobileHeight = bannerTop ? { height: 1170 } : { height: 1050 };
     }
+
+    const desktopStyle = bannerTop ? { paddingTop: 140 } : { paddingTop: 80 };
+    const mobileStyle = bannerTop ? {height: 1170, paddingTop: 200} : {height: 1050, paddingTop: 80};
 
     const style = { ...paddingTop, ...mobileHeight }
     
@@ -75,7 +78,7 @@ const Header = () => {
         <Tags
             key={1}
             tag={"ESCUELA BLENDER"}
-            url="https://aprende-blender.libel.academy/"
+            url="https://libel.academy/escuela-domina-blender/"
             width={215}
         />,
         <Tags
@@ -120,7 +123,7 @@ const Header = () => {
     };
 
     return (
-        <section className="Header" id="home" style={style}>
+        <section className="Header" id="home" style={mobile ? mobileStyle : desktopStyle}>
             <div className="header-container container padding">
                 <Image
                     className="header-decoration"

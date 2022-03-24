@@ -12,8 +12,9 @@ const Courses = () => {
         master: 0,
         camp: 0,
     });
-    const [filter, setFilter] = useState("");
+    const [filter, setFilter] = useState("cursos");
     const filtered = courses.filter((course) => course.tag === filter);
+    const [seeMore, setSeeMore] = useState("https://cursos.libel.academy/")
 
     return (
         <section className="Courses" id="courses">
@@ -38,13 +39,15 @@ const Courses = () => {
                                         camp: 0,
                                     });
                                     setFilter("cursos");
+                                    setSeeMore("https://cursos.libel.academy/")
                                 } else {
                                     setButtonNav({
                                         cursos: 0,
                                         master: 0,
                                         camp: 0,
                                     });
-                                    setFilter("");
+                                    setFilter("cursos");
+                                    setSeeMore("https://cursos.libel.academy/")
                                 }
                             }}
                         >
@@ -60,13 +63,16 @@ const Courses = () => {
                                         camp: 0,
                                     });
                                     setFilter("master");
+                                    setSeeMore("https://libel.academy/master")
+
                                 } else {
                                     setButtonNav({
                                         cursos: 0,
                                         master: 0,
                                         camp: 0,
                                     });
-                                    setFilter("");
+                                    setFilter("cursos");
+                                    setSeeMore("https://cursos.libel.academy/")
                                 }
                             }}
                         >
@@ -82,13 +88,16 @@ const Courses = () => {
                                         camp: 1,
                                     });
                                     setFilter("camp");
+                                    setSeeMore("https://libel.academy/3d-camp")
+
                                 } else {
                                     setButtonNav({
                                         cursos: 0,
                                         master: 0,
                                         camp: 0,
                                     });
-                                    setFilter("");
+                                    setFilter("cursos");
+                                    setSeeMore("https://cursos.libel.academy/")
                                 }
                             }}
                         >
@@ -131,7 +140,7 @@ const Courses = () => {
                 <div className="courses-see-more">
                     <Tags
                         tag={"VER MAS"}
-                        url="https://cursos.libel.academy/collections?category=courses"
+                        url={seeMore}
                         width={150}
                     />
                 </div>

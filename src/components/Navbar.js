@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/Navbar.css";
 
-import BannerTop from "./BannerTop"
-
 import {
     IoArrowBack,
     IoCaretDown,
@@ -28,6 +26,7 @@ import SlideShow from "./sliders/SlideShow";
 import { getRemainingTimeUntilMsTimestamp } from "../utils/countdown";
 import { useDispatch, useSelector } from "react-redux";
 import { closeSideMenu, showSideMenu } from "../features/menu";
+import BannerTop from "./BannerTop";
 
 const defaultRemainingTime = {
     seconds: "00",
@@ -52,7 +51,7 @@ const coursesDetail = {
         {
             id: 2,
             name: "Curso de Blender",
-            url: "https://libel.academy/escuela-domina-blender",
+            url: "https://libel.academy/escuela-domina-blender/",
         },
         {
             id: 3,
@@ -109,7 +108,7 @@ const schoolsDetails = {
         {
             id: 1,
             name: "Escuela Blender",
-            url: "https://libel.academy/escuela-domina-blender",
+            url: "https://libel.academy/escuela-domina-blender/",
         },
         {
             id: 2,
@@ -127,6 +126,8 @@ const schoolsDetails = {
 const Navbar = () => {
     const dispatch = useDispatch();
     const sideMenu = useSelector((state) => state.sideMenu.value.menu);
+    const bannerTop = useSelector((state) => state.banner.value.banner);
+
 
     const [menu, setMenu] = useState(false);
 
@@ -141,6 +142,7 @@ const Navbar = () => {
     const [courseColor, setCourseColor] = useState("#ffffff");
     const [top, setTop] = useState("-100%");
     const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
+    const topMenuContainer = bannerTop ? {height: "calc(100vh - 140px)", top:140} : {height: "calc(100vh - 80px)", top:80}
 
     const countdownTimestampMs = "Sat, 19 Mar 2022 16:00:00 GMT-5";
 
@@ -184,7 +186,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="Navbar">
+        <div className="Navbar">
             <BannerTop />
             <div className="navbar-container container">
                 <div className="home">
@@ -444,7 +446,7 @@ const Navbar = () => {
             </div>
             <div
                 className="courses-menu-container"
-                style={coursesMenu}
+                style={{...coursesMenu, ...topMenuContainer}}
                 onClick={handleCloseCourseMenu}
             >
                 <div className="courses-menu" style={{ top: `${top}` }}>
@@ -475,7 +477,7 @@ const Navbar = () => {
                                         />
                                     </div>
                                     <a
-                                        href="https://libel.academy/escuela-domina-blender"
+                                        href="https://libel.academy/escuela-domina-blender/"
                                         target={"_blank"}
                                         rel="noreferrer"
                                     >
@@ -595,7 +597,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
     );
 };
 
