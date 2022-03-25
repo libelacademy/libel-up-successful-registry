@@ -195,7 +195,7 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navigation">
-                    <div className="nav-countdown">
+                    {/* <div className="nav-countdown">
                         <a
                             href="https://libel.academy/3d-camp"
                             className="nav-countdown-image"
@@ -234,7 +234,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="shortcuts">
                         <a href="https://libel.academy/zbrush/">Licencias</a>
 
