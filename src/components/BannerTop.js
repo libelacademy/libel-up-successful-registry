@@ -5,8 +5,6 @@ import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { closeBanner } from "../features/banner";
 
-import libelIcon from "../images/logo_dot.png"
-
 const BannerTop = () => {
 
     const dispatch = useDispatch();
@@ -34,18 +32,7 @@ const BannerTop = () => {
                 }}
             />
             <div className="banner-container container">
-                <div className="banner-information">
-                    <img src={libelIcon} alt="Libel Academy"/>
-                    <h1>Estamos cumpliendo 7 años</h1>
-                    <p>"Ofertas hasta del 70% DTO"</p>
-                </div>
-                <a
-                    href="https://libel.academy/aniversario"
-                    target={"_blank"}
-                    rel="noreferrer"
-                >
-                    VER OFERTAS
-                </a>
+                <p>Estamos cumpliendo 7 años con ofertas hasta del 70% dto<span> | <a href="https://libel.academy/aniversario">Únete ahora</a></span></p>
             </div>
         </div>
     );
