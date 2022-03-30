@@ -111,7 +111,8 @@
     grid-area: shortcuts;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:flex-end;
+    margin-right: 20px;
 }
 
 .Navbar .nav-courses {

@@ -196,7 +196,7 @@ const Navbar = () => {
                 <div className="navigation">
                     
                     <div className="shortcuts">
-                        <a href="https://libel.academy/zbrush/">Licencias</a>
+                        {/* <a href="https://libel.academy/zbrush/">Licencias</a> */}
 
                         <button
                             style={{ color: `${courseColor}` }}
