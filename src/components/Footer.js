@@ -59,11 +59,11 @@ const Footer = () => {
                                     Escuela Ilustración
                                 </a>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a href="https://libel.academy/zbrush/">
                                     Licencias
                                 </a>
-                            </li>
+                            </li> */}
                             <li>
                                 <a href="#results" onClick={handleLink}>
                                     Resultados
