@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import '../css/Header.css';
 import Tags from './buttons/Tags';
 
@@ -18,8 +18,8 @@ import Image from 'react-image-webp';
 import headerBanner1 from '../images/header-banner-1.png';
 import headerBannerWebp1 from '../images/header-banner-1.webp';
 
-import headerBanner2 from '../images/header-banner-2.png';
-import headerBannerWebp2 from '../images/header-banner-2.webp';
+// import headerBanner2 from '../images/header-banner-2.png';
+// import headerBannerWebp2 from '../images/header-banner-2.webp';
 
 import headerBanner3 from '../images/header-banner-3.png';
 import headerBannerWebp3 from '../images/header-banner-3.webp';
@@ -35,6 +35,8 @@ const Header = () => {
   const [banner, setBanner] = useState(0);
   const bannerTop = useSelector((state) => state.banner.value.banner);
   const mobile = window.innerWidth <= 460;
+
+  const intervaloSlideshow = useRef(null);
 
   const desktopStyle = bannerTop
     ? { paddingTop: 140 }
@@ -110,7 +112,6 @@ const Header = () => {
     );
   };
 
-  console.log(banner)
   const banners = [
     <Image
       key={'banner1'}
@@ -121,33 +122,34 @@ const Header = () => {
         banner === 0 ? 'heder-image-active' : 'header-image-desactive'
       }
     />,
-    <Image
-      key={'banner2'}
-      webp={headerBannerWebp2}
-      src={headerBanner2}
-      alt='Header Banner 2'
-      className={
-        banner === 1 ? 'heder-image-active' : 'header-image-desactive'
-      }
-    />,
+    // <Image
+    //   key={'banner2'}
+    //   webp={headerBannerWebp2}
+    //   src={headerBanner2}
+    //   alt='Header Banner 2'
+    //   className={
+    //     banner === 1 ? 'heder-image-active' : 'header-image-desactive'
+    //   }
+    // />,
     <Image
       key={'banner3'}
       webp={headerBannerWebp3}
       src={headerBanner3}
       alt='Header Banner 3'
       className={
-        banner === 2 ? 'heder-image-active' : 'header-image-desactive'
+        banner === 1 ? 'heder-image-active' : 'header-image-desactive'
       }
     />,
   ];
 
-  const nextBanner = () => {
+  const nextBanner = useCallback(() => {
     setBanner(banner === banners.length - 1 ? 0 : banner + 1);
-  };
+  }, [banner, banners.length]);
 
-  const previousBanner = () => {
+
+  const previousBanner = useCallback(() => {
     setBanner(banner === 0 ? banners.length - 1 : banner - 1);
-  };
+  },[banner, banners.length]);
 
   const tagsList = [
     <Tags
@@ -203,6 +205,12 @@ const Header = () => {
     });
   };
 
+  useEffect(() => {
+    intervaloSlideshow.current = setInterval(nextBanner, 5000);
+    return () => clearInterval(intervaloSlideshow.current);
+  }, [nextBanner])
+  
+
   return (
     <section
       className='Header'
@@ -242,15 +250,7 @@ const Header = () => {
                 onClick={() => {
                   setBanner(1);
                 }}></button>
-              <button
-                className={
-                  banner === 2
-                    ? 'header-slider-dot-active'
-                    : 'header-slider-dot'
-                }
-                onClick={() => {
-                  setBanner(2);
-                }}></button>
+
             </div>
             <IoArrowForward
               className='header-button'
@@ -260,7 +260,7 @@ const Header = () => {
             />
           </div>
           {
-              banner === 2 
+              banner === 1 
               ? <HeaderInformationBlender />
               : <HeaderInformation />
           }
