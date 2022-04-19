@@ -136,7 +136,6 @@ const Courses = () => {
                               />
                           ))}
                 </div>
-                <div className="courses-content-mobile"></div>
                 <div className="courses-see-more">
                     <Tags
                         tag={"VER MAS"}

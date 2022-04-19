@@ -38,9 +38,10 @@ const Course = ({image, avatar, software, title, price, info, start, url, video 
             <div
                 className="course-banner"
                 style={{
-                    backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.6839110644257703) 30%, rgba(255,255,255,0) 80%), url(${image})`,
+                    backgroundImage: `url(${image})`,
                 }}
             >
+                <div className="course-banner-filter"></div>
                 <button
                     className="course-play"
                     onClick={() => {

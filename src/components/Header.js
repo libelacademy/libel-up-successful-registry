@@ -1,286 +1,272 @@
 /** @format */
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+
 import '../css/Header.css';
-import Tags from './buttons/Tags';
 
-import line from '../images/line.png';
-import {
-  IoArrowBack,
-  IoArrowForward,
-  IoChevronForward,
-} from 'react-icons/io5';
+import escuelaDominaBlender from '../images/header/escuela-domina-blender.jpg';
+import escuelaZBrush from '../images/header/escuela-zbrush.jpg';
+import masterBlender from '../images/header/master-blender.jpg';
+import esculturaImpresion from '../images/header/escultura-impreison.jpg';
+import rigAnimacionVideojuegos from '../images/header/rig-animacion-videojuegos.jpg';
+import imprimePersonaje from '../images/header/imprime-personaje.jpg';
+import membresiaRecargada from '../images/header/membresia-recargada.jpg';
 
-import Carousel, { consts } from 'react-elastic-carousel';
+import membresiaRecargada570 from '../images/header/membresia-recargada-570.jpg';
+import escuelaDominaBlender570 from '../images/header/escuela-domina-blender-570.jpg';
+import rigAnimacionVideojuegos570 from '../images/header/rig-animacion-videojuegos-570.jpg';
 
-import Image from 'react-image-webp';
+import decoration from '../images/decorations/counseling_decoration_2.png'
 
-import headerBanner1 from '../images/header-banner-1.png';
-import headerBannerWebp1 from '../images/header-banner-1.webp';
+const sliderList = [
+  {
+    id: 0,
+    image: masterBlender,
+    title: 'Máster Blender',
+    description: 'Curso de Blender',
+    link: 'https://libel.academy/master-blender/',
+  },
+  {
+    id: 1,
+    image: escuelaDominaBlender570,
+    title: 'Escuela Domina Blender',
+    description: 'Curso de Blender',
+    link: 'https://libel.academy/escuela-domina-blender/',
+  },
+  {
+    id: 2,
+    image: membresiaRecargada570,
+    title: 'Membresía Recargada',
+    description: 'Acceso por un año',
+    link: 'https://cursos.libel.academy/bundles/membresia-recargada',
+  },
+  {
+    id: 3,
+    image: rigAnimacionVideojuegos570,
+    title: 'Rig para Animacion de Videojuegos',
+    description: 'Máster Online en vivo',
+    link: 'https://libel.academy/master-rigging/',
+  },
+];
 
-// import headerBanner2 from '../images/header-banner-2.png';
-// import headerBannerWebp2 from '../images/header-banner-2.webp';
-
-import headerBanner3 from '../images/header-banner-3.png';
-import headerBannerWebp3 from '../images/header-banner-3.webp';
-
-import decorationLeft from '../images/decorations/04.png';
-import decorationLeftWebp from '../images/decorations/04.webp';
-
-import PreviousButton from './buttons/PreviousButton';
-import NextButton from './buttons/NextButton';
-import { useSelector } from 'react-redux';
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const Header = () => {
-  const [banner, setBanner] = useState(0);
-  const bannerTop = useSelector((state) => state.banner.value.banner);
-  const mobile = window.innerWidth <= 460;
+  const [progress, setProgress] = useState(0);
 
-  const intervaloSlideshow = useRef(null);
-
-  const desktopStyle = bannerTop
-    ? { paddingTop: 140 }
-    : { paddingTop: 80 };
-  const mobileStyle = bannerTop
-    ? { height: 1170, paddingTop: 200 }
-    : { height: 1050, paddingTop: 80 };
-
-  const HeaderInformation = () => {
-    return (
-      <>
-        <h1 className='header-title'>
-          <span>
-            Academia
-            <br />
-            online
-          </span>{' '}
-          aprende 3d desde cero
-          <img
-            src={line}
-            alt='header-underline'
-            className='header-underline'
-          />
-        </h1>
-        <p className='header-paragraph'>
-          Aprende a tu ritmo o con clases en vivo y logra{' '}
-          <span>resultados increíbles.</span>
-        </p>
-        <a
-          href='#results'
-          className='see-results'
-          onClick={handleLink}>
-          VER RESULTADOS
-          <span className='see-results-circle'>
-            <IoChevronForward />
-          </span>
-        </a>
-      </>
-    );
+  const progressBar = () => {
+    const start = 50;
+    let interval = start;
+    const progressCount = setInterval(() => {
+      if (interval >= 0) {
+        setProgress((start - interval) * 3);
+        interval--;
+      } else {
+        clearInterval(progressCount);
+        setProgress(0);
+      }
+    }, 100);
   };
 
-  const HeaderInformationBlender = () => {
-    return (
-      <>
-        <h1 className='header-title'>
-        BLENDER PARA
-            <br />
-          <span>
-            IMPRESIÓN 3D
-          </span>{' '}
-          <img
-            src={line}
-            alt='header-underline'
-            className='header-underline'
-            style={{width: '100%', marginBottom: -10}}
-          />
-        </h1>
-        <p className='header-paragraph'>
-        Te enseñamos en dos meses a crear e imprimir personajes en BLENDER{' '}
-          <span>"Clases Online en vivo"</span>
-        </p>
-        <a
-          href='https://libel.academy/impresion-3d-con-blender/'
-          className='see-results'
-          style={{paddingLeft: 50}}
-        >
-          VER MAS
-          <span className='see-results-circle'>
-            <IoChevronForward />
-          </span>
-        </a>
-      </>
-    );
-  };
-
-  const banners = [
-    <Image
-      key={'banner1'}
-      webp={headerBannerWebp1}
-      src={headerBanner1}
-      alt='Header Banner 1'
-      className={
-        banner === 0 ? 'heder-image-active' : 'header-image-desactive'
-      }
-    />,
-    // <Image
-    //   key={'banner2'}
-    //   webp={headerBannerWebp2}
-    //   src={headerBanner2}
-    //   alt='Header Banner 2'
-    //   className={
-    //     banner === 1 ? 'heder-image-active' : 'header-image-desactive'
-    //   }
-    // />,
-    <Image
-      key={'banner3'}
-      webp={headerBannerWebp3}
-      src={headerBanner3}
-      alt='Header Banner 3'
-      className={
-        banner === 1 ? 'heder-image-active' : 'header-image-desactive'
-      }
-    />,
-  ];
-
-  const nextBanner = useCallback(() => {
-    setBanner(banner === banners.length - 1 ? 0 : banner + 1);
-  }, [banner, banners.length]);
-
-
-  const previousBanner = useCallback(() => {
-    setBanner(banner === 0 ? banners.length - 1 : banner - 1);
-  },[banner, banners.length]);
-
-  const tagsList = [
-    <Tags
-      key={0}
-      tag={'LICENCIA ZBRUSH'}
-      url='https://libel.academy/zbrush/'
-      width={215}
-    />,
-    <Tags
-      key={1}
-      tag={'ESCUELA BLENDER'}
-      url='https://libel.academy/escuela-domina-blender/'
-      width={215}
-    />,
-    <Tags
-      key={2}
-      tag={'ESCUELA ZBRUSH'}
-      url='https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush'
-      width={215}
-    />,
-    <Tags
-      key={3}
-      tag={'3D CAMP'}
-      url='https://libel.academy/3d-camp/'
-      width={150}
-    />,
-  ];
-
-  const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 460, itemsToShow: 2, itemsToScroll: 1 },
-    { width: 768, itemsToShow: 4, showArrows: false },
-    { width: 1200, itemsToShow: 4, showArrows: false },
-  ];
-
-  const customArrows = ({ type, onClick, isEdge }) => {
-    const pointer =
-      type === consts.PREV ? <PreviousButton /> : <NextButton />;
-    return (
-      <div onClick={onClick} disabled={isEdge}>
-        {pointer}
+  const sliderComponents = sliderList.map((slider) => (
+    <a
+      href={slider.link}
+      key={slider.id}
+      className='header-inner-cart'
+      target={'_blank'}
+      rel='noreferrer'
+      style={{ display: 'block' }}>
+      <div className='header-overlay'></div>
+      <img src={slider.image} alt='master-blender' />
+      <div className='header-item-content'>
+        <div className='fs-16'>
+          <a href={slider.link} target={'_blank'} rel='noreferrer'>
+            {slider.title}
+          </a>
+        </div>
+        <p>{slider.description}</p>
       </div>
-    );
-  };
-
-  const handleLink = (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute('href');
-    const location = document.querySelector(target).offsetTop;
-    window.scrollTo({
-      left: 0,
-      top: location - 80,
-    });
-  };
+      <div className='header-progress'>
+        <div
+          className='header-progress-bar'
+          style={{ width: `${progress}%` }}></div>
+      </div>
+    </a>
+  ));
 
   useEffect(() => {
-    intervaloSlideshow.current = setInterval(nextBanner, 5000);
-    return () => clearInterval(intervaloSlideshow.current);
-  }, [nextBanner])
-  
+    progressBar();
+  }, []);
 
   return (
-    <section
-      className='Header'
-      id='home'
-      style={mobile ? mobileStyle : desktopStyle}>
+    <section className='Header' id='home'>
       <div className='header-container container padding'>
-        <Image
-          className='header-decoration'
-          webp={decorationLeftWebp}
-          src={decorationLeft}
-          alt='Decoration Header'
-        />
-        <div className='header-content'>
-          <div className='header-slider-control'>
-            <IoArrowBack
-              className='header-button'
-              onClick={() => {
-                previousBanner();
-              }}
-            />
-            <div className='header-slider-nav'>
-              <button
-                className={
-                  banner === 0
-                    ? 'header-slider-dot-active'
-                    : 'header-slider-dot'
-                }
-                onClick={() => {
-                  setBanner(0);
-                }}></button>
-              <button
-                className={
-                  banner === 1
-                    ? 'header-slider-dot-active'
-                    : 'header-slider-dot'
-                }
-                onClick={() => {
-                  setBanner(1);
-                }}></button>
-
+      <img src={decoration} alt='decoration' className='header-decoration' />
+        <div className='header-row'>
+          <div className='header-column'>
+            <div className='header-wrap-cart'>
+              <div className='header-cart-item'>
+                <a
+                  href='https://libel.academy/escuela-domina-blender/'
+                  className='header-inner-cart'
+                  target={'_blank'}
+                  rel='noreferrer'
+                  style={{ display: 'block' }}>
+                  <div className='header-overlay'></div>
+                  <img
+                    src={escuelaDominaBlender}
+                    alt='escuela-domina-blender'
+                  />
+                  <div className='header-item-content'>
+                    <div className='fs-16'>
+                      <a
+                        href='https://libel.academy/escuela-domina-blender/'
+                        target={'_blank'}
+                        rel='noreferrer'>
+                        Domina Blender
+                      </a>
+                    </div>
+                    <p>Plan Mensual</p>
+                  </div>
+                </a>
+                <a
+                  href='https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush'
+                  className='header-inner-cart'
+                  target={'_blank'}
+                  rel='noreferrer'
+                  style={{ display: 'block' }}>
+                  <div className='header-overlay'></div>
+                  <img src={escuelaZBrush} alt='escuela-zbrush' />
+                  <div className='header-item-content'>
+                    <div className='fs-16'>
+                      <a
+                        href='https://cursos.libel.academy/bundles/membresia-plus-escuela-zbrush'
+                        target={'_blank'}
+                        rel='noreferrer'>
+                        Escuela ZBrush
+                      </a>
+                    </div>
+                    <p>Plan Mensual</p>
+                  </div>
+                </a>
+              </div>
+              <div className='header-cart-item style2'>
+                <Slider
+                  {...settings}
+                  afterChange={() => {
+                    progressBar();
+                  }}>
+                  {sliderComponents}
+                </Slider>
+              </div>
+              <div className='header-cart-item'>
+                <a
+                  href='https://libel.academy/master-escultura-para-impresion/'
+                  className='header-inner-cart'
+                  target={'_blank'}
+                  rel='noreferrer'
+                  style={{ display: 'block' }}>
+                  <div className='header-overlay'></div>
+                  <img
+                    src={esculturaImpresion}
+                    alt='escultura-impresion'
+                  />
+                  <div className='header-item-content'>
+                    <div className='fs-16'>
+                      <a
+                        href='https://libel.academy/master-escultura-para-impresion/'
+                        target={'_blank'}
+                        rel='noreferrer'>
+                        Escultura Impresión
+                      </a>
+                    </div>
+                    <p>Máster en ZBrush</p>
+                  </div>
+                </a>
+                <a
+                  href='https://libel.academy/master-rigging/'
+                  className='header-inner-cart'
+                  target={'_blank'}
+                  rel='noreferrer'
+                  style={{ display: 'block' }}>
+                  <div className='header-overlay'></div>
+                  <img
+                    src={rigAnimacionVideojuegos}
+                    alt='rig-animacion-videojuegos'
+                  />
+                  <div className='header-item-content'>
+                    <div className='fs-16'>
+                      <a
+                        href='https://libel.academy/master-rigging/'
+                        target={'_blank'}
+                        rel='noreferrer'>
+                        Rig para Animación
+                      </a>
+                    </div>
+                    <p>Máster online en vivo</p>
+                  </div>
+                </a>
+              </div>
+              <div className='header-cart-item'>
+                <a
+                  href='https://libel.academy/impresion-3d-con-blender/'
+                  target={'_blank'}
+                  rel='noreferrer'
+                  className='header-inner-cart'
+                  style={{ display: 'block' }}>
+                  <div className='header-overlay'></div>
+                  <img
+                    src={imprimePersonaje}
+                    alt='imprime-personaje'
+                  />
+                  <div className='header-item-content'>
+                    <div className='fs-16'>
+                      <a
+                        href='https://libel.academy/impresion-3d-con-blender/'
+                        target={'_blank'}
+                        rel='noreferrer'>
+                        Crea e imprime personajes
+                      </a>
+                    </div>
+                    <p>Curso en vivo Blender</p>
+                  </div>
+                </a>
+                <a
+                  href='https://cursos.libel.academy/bundles/membresia-recargada'
+                  target={'_blank'}
+                  rel='noreferrer'
+                  className='header-inner-cart'
+                  style={{ display: 'block' }}>
+                  <div className='header-overlay'></div>
+                  <img
+                    src={membresiaRecargada}
+                    alt='mebresia-recargada'
+                  />
+                  <div className='header-item-content'>
+                    <div className='fs-16'>
+                      <a
+                        href='https://cursos.libel.academy/bundles/membresia-recargada'
+                        target={'_blank'}
+                        rel='noreferrer'>
+                        Membresía Recargada
+                      </a>
+                    </div>
+                    <p>Acceso un año</p>
+                  </div>
+                </a>
+              </div>
             </div>
-            <IoArrowForward
-              className='header-button'
-              onClick={() => {
-                nextBanner();
-              }}
-            />
           </div>
-          {
-              banner === 1 
-              ? <HeaderInformationBlender />
-              : <HeaderInformation />
-          }
-        </div>
-        <div
-          className='header-image'
-          onClick={() => {
-            nextBanner();
-          }}>
-          {banners}
-        </div>
-      </div>
-      <div className='headers-tags'>
-        <div className='header-tags-container container padding'>
-          <Carousel
-            breakPoints={breakPoints}
-            pagination={false}
-            renderArrow={customArrows}>
-            {tagsList}
-          </Carousel>
         </div>
       </div>
     </section>

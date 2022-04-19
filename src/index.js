@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import Video from "./components/modals/Video";
 import Whatsapp from "./components/modals/Whatsapp";
 import InformativeTalks from "./components/modals/InformativeTalks";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 import { Provider } from "react-redux";
