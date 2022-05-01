@@ -474,6 +474,17 @@ const Navbar = () => {
                                         Curso de ilustración
                                     </a>
                                 </li>
+                                <li>
+                                    <div className="corses-bullet-point">
+                                        <img
+                                            src={bulletPoint1}
+                                            alt="bullet point"
+                                        />
+                                    </div>
+                                    <a href="https://libel.academy/aprende-a-tu-ritmo">
+                                        Aprende a tu ritmo
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div className="courses-column">
