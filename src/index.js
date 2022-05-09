@@ -16,6 +16,7 @@ import videoReducer from "./features/video";
 import advisoryReducer from "./features/advisory";
 import sideMenuReducer from "./features/menu";
 import bannerReducer from "./features/banner";
+import ScheduleTalk from "./components/modals/ScheduleTalk";
 
 const store = configureStore({
     reducer: {
@@ -33,6 +34,7 @@ ReactDOM.render(
             <Video />
             <InformativeTalks />
             <Whatsapp />
+            <ScheduleTalk />
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")
