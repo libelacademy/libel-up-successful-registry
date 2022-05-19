@@ -9,7 +9,7 @@ import Image from "react-image-webp";
 import image from "../images/faq-image.png";
 import imageWebp from "../images/faq-image.webp"
 import line from "../images/line.png";
-import { IoChevronForward } from "react-icons/io5";
+// import { IoChevronForward } from "react-icons/io5";
 
 const FAQ = () => {
 
@@ -69,16 +69,25 @@ const FAQ = () => {
                                     question === questions[3].id ? true : false
                                 }
                             />
+                            <Question
+                                id={questions[4].id}
+                                question={questions[4].question}
+                                answer={questions[4].answer}
+                                handleQuestion={handleQuestion}
+                                active={
+                                    question === questions[4].id ? true : false
+                                }
+                            />
+                            <Question
+                                id={questions[5].id}
+                                question={questions[5].question}
+                                answer={questions[5].answer}
+                                handleQuestion={handleQuestion}
+                                active={
+                                    question === questions[5].id ? true : false
+                                }
+                            />
                         </div>
-                        <a
-                            href="https://libel.academy/preguntas-frecuentes/"
-                            target={"_blank"}
-                            rel="noreferrer"
-                            className="more-questions"
-                        >
-                            VER MAS PREGUNTAS&nbsp;&nbsp;
-                            <IoChevronForward />
-                        </a>
                         <a
                             href="https://calendly.com/libel"
                             target={"_blank"}
