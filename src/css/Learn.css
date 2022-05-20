@@ -20,9 +20,23 @@
   justify-content: space-between;
 }
 
+.learn-icons img {
+  position: relative;
+  z-index: 2;
+}
+
 .learn-character {
   position: absolute;
   top: 155px;
+}
+
+.learn-icons-doted-line {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 0;
+  border: medium none;
+  border-top: 10px dashed #6000de !important
 }
 
 .learn-container {

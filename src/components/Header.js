@@ -10,11 +10,20 @@ import ring from '../images/ring.png';
 import anyText from '../images/text.png';
 import libelDot from '../images/logo_dot.png';
 
+import Image from 'react-image-webp';
+
 import { IoPlay } from 'react-icons/io5';
 
 import { getRemainingTimeUntilMsTimestamp } from '../utils/countdown';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+import backgroundRight from '../images/2-resize.jpg';
+import backgroundRightWebp from '../images/2-resize.webp';
+
+import backgroundLeftResize from '../images/1-resize.jpg';
+import backgroundLeftWebpResize from '../images/1-resize.webp';
+import { openAccess } from '../features/access';
 
 const defaultRemainingTime = {
   seconds: '00',
@@ -24,12 +33,14 @@ const defaultRemainingTime = {
 };
 
 const Header = () => {
+  const dispatch = useDispatch();
+
   const [remainingTime, setRemainingTime] = useState(
     defaultRemainingTime
   );
   const start = 'Sat, 4 Jun 2022 00:01:00 GMT-5';
 
-  const {banner} = useSelector(state => state.banner.value)
+  const { banner } = useSelector((state) => state.banner.value);
 
   const updateRemainingTime = (countdown) => {
     setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
@@ -53,15 +64,46 @@ const Header = () => {
   }, [start]);
 
   return (
-    <header className={`header ${ banner ? 'header-padding-top-banner' : 'header-padding-top'}`}>
+    <header
+      className={`header ${
+        banner ? 'header-padding-top-banner' : 'header-padding-top'
+      }`}>
       <img src={ring} className='header-ring-1' alt='ring' />
-
+      <div className='header-background'>
+        <div className='left'>
+          <Image
+            src={backgroundLeftResize}
+            webp={backgroundLeftWebpResize}
+            alt='background'
+            style={{
+              height: '100%',
+              width: '100%',
+              objectFit: 'cover',
+              position: 'relative',
+              left: '-10%',
+            }}
+          />
+        </div>
+        <div className='right'>
+          <Image
+            src={backgroundRight}
+            webp={backgroundRightWebp}
+            alt='background'
+            style={{
+              height: '100%',
+              width: '100%',
+              objectFit: 'cover',
+            }}
+          />
+        </div>
+      </div>
+      <div className='header-filter'></div>
       <div className='header-container container'>
         <div className='header-content'>
           <div className='header-heading'>
-            <div className="header-degrade-elipse-1"></div>
-            <div className="header-degrade-elipse-2"></div>
-            <div className="header-degrade-elipse-3"></div>
+            <div className='header-degrade-elipse-1'></div>
+            <div className='header-degrade-elipse-2'></div>
+            <div className='header-degrade-elipse-3'></div>
             <img src={libelDot} alt='help' className='header-dot' />
             <span className='header-welcome'>Bienvenido a</span>
             <h1 className='header-title'>
@@ -83,7 +125,12 @@ const Header = () => {
               <b>"GRATIS"</b>
             </p>
             <div className='header-content-buttons-mobile'>
-              <button className='btn-free-access'>
+              <button
+                className='btn-free-access'
+                onClick={() => {
+                  console.log('access');
+                  dispatch(openAccess());
+                }}>
                 Accede Gratis
               </button>
               <button className='btn-trailer'>
@@ -134,7 +181,14 @@ const Header = () => {
             </div>
           </div>
           <div className='header-content-buttons'>
-            <button className='btn-free-access'>Accede Gratis</button>
+            <button
+              className='btn-free-access'
+              onClick={() => {
+                console.log('access');
+                dispatch(openAccess());
+              }}>
+              Accede Gratis
+            </button>
             <button className='btn-trailer'>
               <span>
                 <IoPlay />
@@ -155,7 +209,7 @@ const Header = () => {
           />
           <img src={ring} className='header-ring-2' alt='ring' />
           <img src={ring} className='header-ring-3' alt='ring' />
-          <div className="header-degrade-elipse-4"></div>
+          <div className='header-degrade-elipse-4'></div>
           <div className='header-information-item'>
             <span className='header-information-title'>
               LIBEL UP

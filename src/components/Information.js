@@ -9,9 +9,12 @@ import ZBrush from '../images/technologies/zbrush.png';
 import substance from '../images/technologies/substance.png';
 import photoshop from '../images/technologies/photoshop.png';
 import blender from '../images/technologies/blender.png';
+import { useDispatch } from 'react-redux';
+import { openSupport } from '../features/support';
 
 const Information = () => {
 
+  const dispatch = useDispatch();
 
   return (
     <section className='information' id="information">
@@ -33,7 +36,9 @@ const Information = () => {
           gratuita de calidad.
         </p>
         <div className='information-buttons'>
-          <button className='information-btn btn-degrade'>
+          <button className='information-btn btn-degrade' onClick={() => {
+            dispatch(openSupport());
+          }}>
             Apoya esta iniciativa
           </button>
           <button className='information-btn btn-dark'>

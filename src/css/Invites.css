@@ -1,0 +1,206 @@
+/** @format */
+
+.invites {
+  width: 100%;
+  /* height: 592px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+  background-image: url('../images/ella-don-5388rNnwilk-unsplash\ 1.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
+}
+
+.invites-filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90.18deg,
+    rgba(4, 4, 6, 0.3) -4.89%,
+    #040406 7.98%,
+    #040406 64.25%,
+    rgba(4, 4, 6, 0) 84.96%
+  );
+  z-index: 1;
+}
+
+.invites-background-left {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+.invites-decoration {
+  position: absolute;
+  bottom: -5%; 
+  left: 0;
+  z-index: 2;
+}
+
+.invites-container {
+  padding-top: 123px;
+  padding-bottom: 183.13px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+}
+
+.invites-line {
+  height: 3px;
+  width: 98px;
+  border-radius: 0px;
+  background: #ffffff;
+  margin-bottom: 35px;
+}
+
+.invites-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 100.5%;
+  max-width: 574px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.invites-title span {
+  background: linear-gradient(
+    89.98deg,
+    #6000de 0.03%,
+    #02fcff 74.91%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.invites-paragraph {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+  max-width: 547px;
+  margin-bottom: 31px;
+}
+
+.invites-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.invites-btn {
+  border: none;
+  height: 56px;
+  width: 265px;
+  border-radius: 63px;
+  -webkit-border-radius: 63px;
+  -moz-border-radius: 63px;
+  -ms-border-radius: 63px;
+  -o-border-radius: 63px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.invites-degrade-btn {
+  font-size: 24px;
+  line-height: 29px;
+  background: linear-gradient(
+    90.46deg,
+    #6000de -2.52%,
+    #02fcff 116.79%
+  );
+}
+
+.invites-outline {
+  background: transparent;
+  border: 2px solid #ffffff !important;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .invites {
+    background-size: auto 100%;
+  }
+  .invites-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      90.18deg,
+      rgba(4, 4, 6, 0.3) -4.89%,
+      #040406 7.98%,
+      #040406 4.25%,
+      rgba(4, 4, 6, 0) 84.96%
+    );
+    z-index: 1;
+  }
+
+  .invites-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .invites-line{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+}
+  
+
+@media screen and (max-width: 460px) {
+  .invites-background-left {
+    display: none;
+  }
+  .invites-buttons {
+    flex-direction: column;
+  }
+
+  .invites-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      90.18deg,
+      rgba(4, 4, 6, 0.7) 10%,
+      /* #040406 7.98%,
+      #040406 4.25%, */
+      rgba(4, 4, 6, 0.8) 100%
+    );
+    z-index: 1;
+  }
+}

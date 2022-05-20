@@ -7,6 +7,8 @@ import listIcon from '../images/list-icon.png';
 import character from '../images/Marcos - render.png';
 
 import decoration from '../images/decorations/image 32.png';
+import { useDispatch } from 'react-redux';
+import { openAccess } from '../features/access';
 
 const items = [
   'Insertar Copy nuevo',
@@ -16,6 +18,9 @@ const items = [
 ];
 
 const Whiteboard = () => {
+
+  const dispatch = useDispatch();
+
   return (
     <section className='whiteboard'>
       <img
@@ -42,7 +47,9 @@ const Whiteboard = () => {
               </div>
             ))}
           </div>
-          <button className='whiteboard-button'>Accede Gratis</button>
+          <button className='whiteboard-button' onClick={() => {
+                dispatch(openAccess());
+              }}>Accede Gratis</button>
         </div>
         <div className='whiteboard-character-container'>
           <div className="whiteboard-character-elipse"></div>

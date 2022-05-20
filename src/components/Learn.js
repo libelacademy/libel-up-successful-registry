@@ -20,6 +20,7 @@ const Learn = () => {
   return (
     <section className='learn'>
       <div className='learn-icons'>
+        <div className='learn-icons-doted-line'></div>
         <img src={ZBrush} alt='ZBrush' />
         <img src={zoom} alt='zoom' />
         <img src={discord} alt='discord' />

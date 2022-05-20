@@ -16,6 +16,11 @@ import videoReducer from "./features/video";
 import advisoryReducer from "./features/advisory";
 import sideMenuReducer from "./features/menu";
 import bannerReducer from "./features/banner";
+import supportReducer from "./features/support";
+import accessReducer from "./features/access";
+
+import SupportInitiative from "./components/modals/SupportInitiative";
+import AccessFree from "./components/modals/AccessFree";
 
 
 const store = configureStore({
@@ -24,6 +29,8 @@ const store = configureStore({
         advisory: advisoryReducer,
         sideMenu: sideMenuReducer,
         banner: bannerReducer,
+        support: supportReducer,
+        access: accessReducer,
     },
 });
 
@@ -34,6 +41,8 @@ ReactDOM.render(
             <Video />
             <InformativeTalks />
             <Whatsapp />
+            <SupportInitiative />
+            <AccessFree />
         </Provider>
     </React.StrictMode>,
     document.getElementById("root")

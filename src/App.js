@@ -4,6 +4,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Information from './components/Information';
+import Invites from './components/Invites';
 import Learn from './components/Learn';
 import Navbar from './components/Navbar';
 import Whiteboard from './components/Whiteboard';
@@ -14,9 +15,10 @@ function App() {
       <Navbar />
       <Header />
       <Learn />
-      <Benefits />
       <Information />
+      <Invites />
       <Whiteboard />
+      <Benefits />
       <FAQ />
       <Footer />
     </main>
