@@ -55,6 +55,7 @@ const Whiteboard = () => {
           </div>
           <div className='whiteboard-buttons'>
             <button
+              disabled
               className='whiteboard-button'
               onClick={() => {
                 dispatch(openAccess());
