@@ -239,9 +239,10 @@ const Header = () => {
               beneficiar a toda la comunidad hispanohablante
               interesada en <b>aprender 3D.</b>
             </p>
-            <button className='header-information-btn'>
+            <a className='header-information-btn' href='#learn'
+              onClick={handleLink}>
               Ver cursos y requisitos
-            </button>
+            </a>
           </div>
           <div className='header-information-item'>
             <span className='header-information-title'>

@@ -21,7 +21,7 @@ import { openAccess } from '../features/access';
 const Learn = () => {
   const dispatch = useDispatch();
   return (
-    <section className='learn'>
+    <section className='learn' id="learn">
       <div className='learn-icons'>
         <div className='learn-icons-doted-line'></div>
         <img src={ZBrush} alt='ZBrush' />
