@@ -83,7 +83,8 @@ const SupportInitiative = () => {
                 id='frm_ePaycoCheckoutOpen'
                 name='frm_ePaycoCheckoutOpen'
                 method='POST'
-                action='https://secure.payco.co/checkoutopen.php'>
+                action='https://secure.payco.co/checkoutopen.php'
+                target='_blank'>
                 <input
                   name='p_cust_id_cliente'
                   type='hidden'
