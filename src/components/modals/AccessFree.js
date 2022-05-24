@@ -16,6 +16,7 @@ const AccessFree = () => {
 
   const [selected, setSelected] = useState(false);
   const [typeStudent, setTypeStudent] = useState(null);
+  const [url, setUrl] = useState(null);
 
   const dispatch = useDispatch();
   const modal = useSelector((state) => state.access.value.modal);
@@ -104,6 +105,7 @@ const AccessFree = () => {
                   onClick={() => {
                     setSelected(true);
                     setTypeStudent('current');
+                    setUrl('https://libel.academy/libel-up-estudiantes/');
                   }}>
                   Soy Alumno
                 </button>
@@ -112,6 +114,7 @@ const AccessFree = () => {
                   onClick={() => {
                     setSelected(true);
                     setTypeStudent('new');
+                    setUrl('https://libel.academy/libel-up-nuevos-estudiantes/');  
                   }}>
                   Soy Nuevo
                 </button>
@@ -123,25 +126,29 @@ const AccessFree = () => {
                   {typeStudent === 'current' ? 'actual' : 'nuevo'}?
                 </p>
                 <div className='access-buttons-options'>
-                  <button
+                  <a
+                    href={url}
                     className='access-btn access-btn-yes'
                     style={{
                       backgroundColor: '#6000de',
                       marginBottom: 10,
                       height: 38,
+                      width: 150
                     }}>
                     Continuar
-                  </button>
+                  </a>
                   <button
                     className='access-btn access-btn-no'
                     style={{
                       backgroundColor: 'transparent',
                       border: '2px solid #ffffff',
                       height: 38,
+                      width: 150
                     }}
                     onClick={() => {
                       setSelected(false);
                       setTypeStudent(null);
+                      setUrl(null);
                     }}>
                     Cancelar
                   </button>

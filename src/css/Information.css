@@ -131,6 +131,10 @@
 
 .btn-dark {
   background: #08040d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .information-next {

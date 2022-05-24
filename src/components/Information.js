@@ -41,10 +41,10 @@ const Information = () => {
           }}>
             Apoya esta iniciativa
           </button>
-          <button className='information-btn btn-dark'>
+          <a href='https://wa.link/269xqv' rel="noreferrer" target={'_blank'} className='information-btn btn-dark'>
             <IoLogoWhatsapp style={{ marginRight: 16 }} />
             Dona un curso
-          </button>
+          </a>
         </div>
         <span className='information-next'>Próximos cursos</span>
         <div className='information-technologies'>

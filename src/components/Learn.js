@@ -15,8 +15,11 @@ import feedbackIcon from '../images/Feedback icon.png';
 import tabletsIcon from '../images/Tabletas icon.png';
 import internetIcon from '../images/Internet icon.png';
 import computerIcon from '../images/Computador icon.png';
+import { useDispatch } from 'react-redux';
+import { openAccess } from '../features/access';
 
 const Learn = () => {
+  const dispatch = useDispatch();
   return (
     <section className='learn'>
       <div className='learn-icons'>
@@ -144,6 +147,15 @@ const Learn = () => {
             </div>
           </div>
         </div>
+        <button
+          className='learn-free-access'
+          style={{border: 'none'}}
+          onClick={() => {
+            console.log('access');
+            dispatch(openAccess());
+          }}>
+          Únete Gratis
+        </button>
       </div>
     </section>
   );

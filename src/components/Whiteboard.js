@@ -9,16 +9,17 @@ import character from '../images/Marcos - render.png';
 import decoration from '../images/decorations/image 32.png';
 import { useDispatch } from 'react-redux';
 import { openAccess } from '../features/access';
+import { openVideo } from '../features/video';
+import { IoPlay } from 'react-icons/io5';
 
 const items = [
-  'Insertar Copy nuevo',
-  'Copy Aquí',
-  'Ejemplo de texto',
-  'Aquí Copy Nuevo',
+  'Feedback online en vivo',
+  'Aprende desde cero',
+  'Duración un mes',
+  'Software ZBrush',
 ];
 
 const Whiteboard = () => {
-
   const dispatch = useDispatch();
 
   return (
@@ -32,12 +33,17 @@ const Whiteboard = () => {
         <div className='whiteboard-content'>
           <div className='whiteboard-heading'>
             <div className='whiteboard-line'></div>
-            <h3 className='whiteboard-head'>Whiteboard</h3>
+            <h3 className='whiteboard-head'>
+              Participa por BECAS DEL 100%
+            </h3>
           </div>
-          <h2 className='whiteboard-title'>Read Our Doumentes</h2>
+          <h2 className='whiteboard-title'>
+            Domina la escultura en ZBrush
+          </h2>
           <p className='whiteboard-paragraph'>
-            Here is our full documentes that help you to understands
-            deeply about us and our operation.
+            Libel premiara los resultados más destacados y dará Becas
+            del 100% en este excelente entrenamiento con
+            acompañamiento especializado.
           </p>
           <div className='whiteboard-items'>
             {items.map((item, index) => (
@@ -47,12 +53,33 @@ const Whiteboard = () => {
               </div>
             ))}
           </div>
-          <button className='whiteboard-button' onClick={() => {
+          <div className='whiteboard-buttons'>
+            <button
+              className='whiteboard-button'
+              onClick={() => {
                 dispatch(openAccess());
-              }}>Accede Gratis</button>
+              }}>
+              Ver curso
+            </button>
+            <button
+              className='whiteboard-trailer'
+              onClick={() =>
+                dispatch(
+                  openVideo({
+                    modal: true,
+                    url: 'https://www.youtube.com/watch?v=BO4sQALaWn8',
+                  })
+                )
+              }>
+              <span>
+                <IoPlay />
+              </span>
+              Ver trailer
+            </button>
+          </div>
         </div>
         <div className='whiteboard-character-container'>
-          <div className="whiteboard-character-elipse"></div>
+          <div className='whiteboard-character-elipse'></div>
           <img
             src={character}
             alt='whiteboard-character'

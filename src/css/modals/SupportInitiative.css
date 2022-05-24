@@ -157,7 +157,20 @@
 .support-btn-card {
   background: #ffffff;
   color: #6000de;
+  border: none;
+  padding: 0;
 }
+
+  /* .support-btn-card form {
+    height: 60%;
+    width: 80%;
+  }
+
+  .support-btn-card input[type="image"] {
+    height: 100%;
+    border: none;
+    object-fit: contain;
+  } */
 
 .support-btn-paypal {
   background: #6000de;

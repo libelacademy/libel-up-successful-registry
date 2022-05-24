@@ -49,7 +49,6 @@
   -moz-transition: all 0.5s ease-in;
   -ms-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
-  
 }
 
 .access-elipse-1 {
@@ -189,9 +188,12 @@
   font-size: 17px;
   line-height: 103.5%;
   text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .access-btn-current {

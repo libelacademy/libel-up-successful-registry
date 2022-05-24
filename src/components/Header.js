@@ -24,6 +24,7 @@ import backgroundRightWebp from '../images/2-resize.webp';
 import backgroundLeftResize from '../images/1-resize.jpg';
 import backgroundLeftWebpResize from '../images/1-resize.webp';
 import { openAccess } from '../features/access';
+import { openVideo } from '../features/video';
 
 const defaultRemainingTime = {
   seconds: '00',
@@ -38,7 +39,7 @@ const Header = () => {
   const [remainingTime, setRemainingTime] = useState(
     defaultRemainingTime
   );
-  const start = 'Sat, 4 Jun 2022 00:01:00 GMT-5';
+  const start = 'Mon, 4 Jul 2022 19:00:00 GMT-5';
 
   const { banner } = useSelector((state) => state.banner.value);
 
@@ -133,7 +134,16 @@ const Header = () => {
                 }}>
                 Accede Gratis
               </button>
-              <button className='btn-trailer'>
+              <button
+                className='btn-trailer'
+                onClick={() =>
+                  dispatch(
+                    openVideo({
+                      modal: true,
+                      url: 'https://www.youtube.com/watch?v=7lIiam941vw',
+                    })
+                  )
+                }>
                 <span>
                   <IoPlay />
                 </span>
@@ -143,7 +153,7 @@ const Header = () => {
           </div>
           <div className='header-class'>
             <p>
-              Las clases inician el <b>4 de Junio</b>
+              Las clases inician el <b>4 de Julio</b>
             </p>
             <div className='header-countdown'>
               <div className='header-countdown-item'>
@@ -189,7 +199,16 @@ const Header = () => {
               }}>
               Accede Gratis
             </button>
-            <button className='btn-trailer'>
+            <button
+              className='btn-trailer'
+              onClick={() =>
+                dispatch(
+                  openVideo({
+                    modal: true,
+                    url: 'https://www.youtube.com/watch?v=7lIiam941vw',
+                  })
+                )
+              }>
               <span>
                 <IoPlay />
               </span>
