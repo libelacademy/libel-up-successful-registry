@@ -1,5 +1,5 @@
 {
-    "name": "libel_academy_homepage",
+    "name": "successful_registry",
     "author": "Juan Antonio Ceballos",
     "version": "2.1.0",
     "private": true,
@@ -23,7 +23,7 @@
         "slick-carousel": "^1.8.1",
         "web-vitals": "^2.1.3"
     },
-    "homepage": "http://libel.academy/libel-up",
+    "homepage": "http://libel.academy/libel-up-registro-exitoso",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
